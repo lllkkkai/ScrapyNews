@@ -6,13 +6,13 @@ import urllib
 x = 0
 for i in range(1,2):
     if i > 1:
-        url = "https://tieba.baidu.com/p/2555125530"+"?pn="+str(i)
+        url = "https://tieba.baidu.com/p/5993183373"+"?pn="+str(i)
     else:
-        url = "https://tieba.baidu.com/p/2555125530"
+        url = "https://tieba.baidu.com/p/5993183373"
     headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'}
     page = request.Request(url, headers=headers)
-    page_info = request.urlopen(page).read().decode('utf-8')
+    page_info = request.urlopen(page).read().decode('utf-8',"ignore")
 
     soup = BeautifulSoup(page_info, 'html.parser')
     imgurls = soup.find_all('img')
@@ -21,6 +21,6 @@ for i in range(1,2):
         her = imgurl.get('src')
         if re.match(r'^https?://imgsa.baidu.com.*', her):
             print(her)
-            # urllib.request.urlretrieve(her, 'C:\py_result\pic1\%s.jpg' % x)
+            urllib.request.urlretrieve(her, 'C:\py_result\pic2\%s.jpg' % x)
             x+=1
 
