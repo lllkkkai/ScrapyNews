@@ -13,5 +13,13 @@ class TestDemo1Item(scrapy.Item):
     title = scrapy.Field() #标题
     link = scrapy.Field() #链接
     desc = scrapy.Field() #简述
-    posttime = scrapy.Field() #发布时间
+    time = scrapy.Field() #发布时间
+    tag = scrapy.Field()
+
+class ygnewsItem(scrapy.Item):
+    title = scrapy.Field()
+    link = scrapy.Field()
+    text = scrapy.Field()
+    time = scrapy.Field()
+    tag = scrapy.Field()
 
