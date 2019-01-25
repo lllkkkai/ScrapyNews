@@ -14,7 +14,7 @@ class MySpider(scrapy.Spider):
                   'https://www.cnbeta.com/category/comic.htm',
                   'https://www.cnbeta.com/category/soft.htm',
                   'https://www.cnbeta.com/category/tech.htm',
-                  'https://www.cnbeta.com/category/funny.htm'
+                  'https://www.cnbeta.com/category/funny.htm',
                   ]
 
     def parse(self, response):
@@ -22,25 +22,21 @@ class MySpider(scrapy.Spider):
         a = 0
         for infor in response.xpath('//div[@class="item"]'):
             item = TestDemo1Item()
-            item['title'] = infor.xpath('./dl/dt/a/text()').extract_first()
-            item['desc'] = infor.xpath('normalize-space(./dl/dd/p/text())').extract_first()
-            item['link'] = infor.xpath('./dl/dt/a/@href').extract_first()
-            #item['time'] = infor.xpath('./div[@class="meta-data"]/ul/li/text()').extract_first()
-            #link need re beacaues //hot.funny.com
-            #time
-
-            # if re.match(r'^https?:/{2}\w.+$', item['link']):
+            item['title'] = infor.xpath('./dl/dt/a/descendant::text()').extract_first()
+            item['desc'] = infor.xpath('normalize-space(./dl/dd/p/descendant::text())').extract_first()
+            link = infor.xpath('./dl/dt/a/@href').extract_first()
+            # if re.match(r'^https?:/{2}\w.+$',link):
             #     a = 1
             # else:
-            #     item['link'] = "http:" + item['link']
+            #     link = "http:" + link
+
+            item['link'] = link
+            #item['time'] = infor.xpath('./div[@class="meta-data"]/ul[@class="status"]/li/text()').extract_first()
+            #link need re beacaues //hot.funny.com
+            #time
             items.append(item)
             a+=1
         return items
-        # link = LinkExtractor(restrict_xpaths='//a[@href]')
-        # links = link.extract_links(response)
-        # for i in links:
-        #     print(i)
-
     # news total link
     # def get_detail(self,response):
     #     item = TestDemo1Item()
