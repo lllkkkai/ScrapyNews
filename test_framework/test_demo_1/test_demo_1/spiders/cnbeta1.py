@@ -22,12 +22,14 @@ class MySpider(scrapy.Spider):
         #     item = TestDemo1Item()
         #     item['title'] = infor.xpath('./dl/dt/a/descendant::text()').extract_first()
         #     item['desc'] = infor.xpath('normalize-space(./dl/dd/p/descendant::text())').extract_first()
-            link = infor.xpath('./dl/dt/a/@href').xpath('string(.)').extract()[0]
-            print(link)
-            yield scrapy.Request(url=link, callback=self.parse_details)
+            link = infor.xpath('./dl/dt/a/@href').extract()
+            if link!= ' ':
+                print(link)
+                link = 'https://www.cnbeta.com/articles/tech/812773.htm'
+                yield scrapy.Request(url=link, callback=self.parse_details)
 
     def parse_details(self,response):
-        print("--------------------")
+        print("11111111111111111111111")
         #     item['link'] = link
         #     items.append(item)
         #     a+=1
