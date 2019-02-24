@@ -1,7 +1,6 @@
 import scrapy
 from test_demo_1.items import TestDemo1Item
 
-
 class MySpider(scrapy.Spider):
     name = 'cnbeta1'
     start_urls = [

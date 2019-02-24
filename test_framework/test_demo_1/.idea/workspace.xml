@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b2849f6-f155-4eea-bfb1-b8cd18ec986e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/huxiu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/entrypoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/entrypoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/pipelines.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,10 +19,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="153">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,20 +45,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            <state relative-caret-position="102">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+            <state relative-caret-position="522">
+              <caret line="110" column="44" lean-forward="true" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#169#195#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -48,19 +76,7 @@
         <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/test1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -84,13 +100,22 @@
         <option value="$PROJECT_DIR$/test_demo_1/spiders/huxiu.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/quote.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/dmoz_spider.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/items.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/ygnews1.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/test1.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/news.txt" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/temp.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/temp1.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/items.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/re_219.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_data_store.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/middlewares.py" />
       </list>
     </option>
   </component>
@@ -108,6 +133,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,11 +156,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -150,6 +174,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.entrypoint">
+    <configuration name="cnbeta_roll" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test_demo_1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_demo_1/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="entrypoint" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test_demo_1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,6 +208,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="re_219" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test_demo_1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_demo_1/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/spiders/re_219.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="temp" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test_demo_1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_demo_1/spiders" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/spiders/temp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,6 +282,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.entrypoint" />
+        <item itemvalue="Python.cnbeta_roll" />
+        <item itemvalue="Python.temp" />
+        <item itemvalue="Python.re_219" />
         <item itemvalue="Python.test1" />
       </list>
     </recent_temporary>
@@ -224,41 +314,31 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20442571" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14383562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36158797" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39806867" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
+      <window_info anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="2" weight="0.35515022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39685315" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32867134" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32867134" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32867134" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32832617" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_demo_1/quotes-www.cnbeta.com.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11013" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/test1.json" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/dmoz_spider.py" />
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/quote.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/huxiu.py" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/huxiu.json" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/ygnews1.py">
@@ -271,38 +351,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/news.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/huxiu.py" />
-    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/quote.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        <state relative-caret-position="136">
+          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-527">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/screen.png" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/ghostdriver.log" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/screen.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/club.haval.com.cn.html" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/tech.htm.html" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/ghostdriver.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/geckodriver.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news_demo1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/temp1.py" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/quotes-www.cnbeta.com.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/temp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="18" lean-forward="true" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news222.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="289">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/re_219.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="34" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_data_store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="25" lean-forward="true" selection-end-line="37" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="102">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/huxiu.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/test1.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="425">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -312,16 +479,26 @@
     <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
+        <state relative-caret-position="-102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="27" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="110" column="44" lean-forward="true" selection-start-line="110" selection-start-column="44" selection-end-line="110" selection-end-column="44" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
           </folding>
         </state>
       </provider>

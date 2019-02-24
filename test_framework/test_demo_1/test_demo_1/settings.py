@@ -22,6 +22,9 @@ ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,}
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
+DOWNLOADER_MIDDLEWARES = {
+    'test_demo_1.middlewares.SeleniumMiddleware': 543,
+}
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 

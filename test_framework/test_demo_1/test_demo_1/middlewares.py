@@ -6,7 +6,9 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from scrapy.http import HtmlResponse
+from selenium.common.exceptions import TimeoutException
+import time
 
 class TestDemo1SpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -101,3 +103,24 @@ class TestDemo1DownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class SeleniumMiddleware(object):
+
+    def process_request(self, request, spider):
+        if spider.name == 'roll_store_test':
+        # if request.url == 'https://www.cnbeta.com/category/tech.htm':
+            try:
+                spider.browser.get(request.url)
+                i=0
+                while i < 5:
+                    spider.browser.execute_script('window.scrollTo(0, document.body.scrollHeight)')
+                    i+=1
+                    print(str(i)+"---------------------------------------")
+                # spider.browser.execute_script('window.scrollTo(0, 2*document.body.scrollHeight)')
+                # spider.browser.execute_script('window.scrollBy(0, 8000)')
+            except TimeoutException as e:
+                print('超时')
+                spider.browser.execute_script('window.stop()')
+            time.sleep(2)
+            return HtmlResponse(url=spider.browser.current_url, body=spider.browser.page_source, encoding="utf-8", request=request)

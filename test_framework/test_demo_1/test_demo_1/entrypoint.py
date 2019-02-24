@@ -1,2 +1,2 @@
 from scrapy.cmdline import execute
-execute(['scrapy', 'crawl', 'cnbeta1'])
+execute(['scrapy', 'crawl', 'roll_store_test'])
