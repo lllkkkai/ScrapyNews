@@ -12,7 +12,7 @@ class MySpider(scrapy.Spider):
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
         self.browser = webdriver.Chrome(executable_path=(r'C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'), chrome_options=chrome_options)
-        self.browser.set_page_load_timeout(90)
+        self.browser.set_page_load_timeout(120)
 
     def closed(self, spider):
         print("spider closed")
@@ -47,5 +47,5 @@ class MySpider(scrapy.Spider):
         item['title'] = title
         item['desc'] = detail_desc
         item['tag'] = response.meta['tag']
-        return item
+        yield item
 

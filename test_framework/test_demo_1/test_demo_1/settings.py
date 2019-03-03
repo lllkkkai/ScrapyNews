@@ -14,7 +14,19 @@ BOT_NAME = 'test_demo_1'
 SPIDER_MODULES = ['test_demo_1.spiders']
 NEWSPIDER_MODULE = 'test_demo_1.spiders'
 
-ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,}
+# ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,} #存储为txt文件
+
+ITEM_PIPELINES = {
+    'test_demo_1.MySQLPipeline.MySQLPipeline': 300,#保存到mysql数据库
+}
+
+#Mysql数据库的配置信息
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'newsdata'         #数据库名字，请修改
+MYSQL_USER = 'root'             #数据库账号，请修改
+MYSQL_PASSWD = ''         #数据库密码，请修改
+
+MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'test_demo_1 (+http://www.yourdomain.com)'

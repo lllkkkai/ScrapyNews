@@ -108,8 +108,8 @@ class TestDemo1DownloaderMiddleware(object):
 class SeleniumMiddleware(object):
 
     def process_request(self, request, spider):
-        if spider.name == 'roll_store_test':
-        # if request.url == 'https://www.cnbeta.com/category/tech.htm':
+        # if spider.name == 'roll_store_test':
+        if request.url == 'https://www.cnbeta.com/category/tech.htm':
             try:
                 spider.browser.get(request.url)
                 i=0
@@ -121,6 +121,7 @@ class SeleniumMiddleware(object):
                 # spider.browser.execute_script('window.scrollBy(0, 8000)')
             except TimeoutException as e:
                 print('超时')
+                spider.browser.execute_script('window.scrollTo(0, document.body.scrollHeight)')
                 spider.browser.execute_script('window.stop()')
             time.sleep(2)
             return HtmlResponse(url=spider.browser.current_url, body=spider.browser.page_source, encoding="utf-8", request=request)
