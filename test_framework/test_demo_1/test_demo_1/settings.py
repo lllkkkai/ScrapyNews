@@ -16,9 +16,9 @@ NEWSPIDER_MODULE = 'test_demo_1.spiders'
 
 # ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,} #存储为txt文件
 
-ITEM_PIPELINES = {
-    'test_demo_1.MySQLPipeline.MySQLPipeline': 300,#保存到mysql数据库
-}
+# ITEM_PIPELINES = {
+#     'test_demo_1.MySQLPipeline.MySQLPipeline': 300,#保存到mysql数据库
+# }
 
 #Mysql数据库的配置信息
 MYSQL_HOST = '127.0.0.1'

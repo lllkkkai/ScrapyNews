@@ -16,6 +16,8 @@ class TestDemo1Item(scrapy.Item):
     time = scrapy.Field() #发布时间
     tag = scrapy.Field()  #tag
     source = scrapy.Field() # 稿源
+    keyword = scrapy.Field() #
+    seg = scrapy.Field() #
 
 class ygnewsItem(scrapy.Item):
     title = scrapy.Field()
