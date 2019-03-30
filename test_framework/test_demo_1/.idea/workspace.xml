@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2849f6-f155-4eea-bfb1-b8cd18ec986e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/entrypoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/entrypoint.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/screen.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" afterDir="false" />
@@ -20,15 +20,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+            <state relative-caret-position="334">
+              <caret line="113" column="41" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1552130337733" expanded="true" signature="2367:2392" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -36,11 +44,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="76" column="41" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="41" />
+            <state relative-caret-position="238">
+              <caret line="215" column="41" selection-start-line="215" selection-start-column="41" selection-end-line="215" selection-end-column="41" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+              <folding>
+                <element signature="e#193#202#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -57,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
+            <state relative-caret-position="323">
+              <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -92,18 +121,19 @@
         <option value="$PROJECT_DIR$/test_demo_1/spiders/re_219.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_data_store.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_re.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
         <option value="$PROJECT_DIR$/test_demo_1/middlewares.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/items.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/MySQLPipeline_cnr.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/items.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -296,22 +326,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17791899" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17702845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="2" weight="0.94755244" />
+      <window_info active="true" anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.40236053" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39592275" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32867134" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32832617" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50052685" side_tool="true" weight="0.96781117" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32832617" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -355,9 +384,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/screen.png" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/ghostdriver.log" />
-    <entry file="file://$PROJECT_DIR$/test_demo_1/screen.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/club.haval.com.cn.html" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/tech.htm.html" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/ghostdriver.log">
@@ -440,26 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="31" lean-forward="true" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
-          <folding>
-            <element signature="e#193#202#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="114" column="19" lean-forward="true" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
-          <folding>
-            <element signature="e#169#195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -470,17 +476,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/screen.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="-5">
+          <caret line="90" column="34" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="34" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline_cnr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="144" selection-start-line="18" selection-start-column="144" selection-end-line="18" selection-end-column="144" />
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="215" column="41" selection-start-line="215" selection-start-column="41" selection-end-line="215" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+          <folding>
+            <element signature="e#193#202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="69" lean-forward="true" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -491,31 +537,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-start-column="2" selection-end-line="20" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="76" column="41" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="101" column="31" lean-forward="true" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        <state relative-caret-position="334">
+          <caret line="113" column="41" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="41" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1552130337733" expanded="true" signature="2367:2392" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="72" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
         </state>
       </provider>
     </entry>

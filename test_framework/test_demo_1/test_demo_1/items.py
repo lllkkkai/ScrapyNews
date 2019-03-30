@@ -9,7 +9,20 @@ import scrapy
 
 class TestDemo1Item(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    id = scrapy.Field()
+    title = scrapy.Field() #标题
+    summary = scrapy.Field()
+    content = scrapy.Field()
+    keywords = scrapy.Field()
+    class_id = scrapy.Field()
+    source = scrapy.Field()
+    ranks = scrapy.Field()
+    url = scrapy.Field()
+    time = scrapy.Field()
+    place = scrapy.Field()
+    terms = scrapy.Field()
+
+class ygnewsItem(scrapy.Item):
     title = scrapy.Field() #标题
     link = scrapy.Field() #链接
     desc = scrapy.Field() #简述
@@ -19,10 +32,4 @@ class TestDemo1Item(scrapy.Item):
     keyword = scrapy.Field() #
     seg = scrapy.Field() #
 
-class ygnewsItem(scrapy.Item):
-    title = scrapy.Field()
-    link = scrapy.Field()
-    text = scrapy.Field()
-    time = scrapy.Field()
-    tag = scrapy.Field()
 

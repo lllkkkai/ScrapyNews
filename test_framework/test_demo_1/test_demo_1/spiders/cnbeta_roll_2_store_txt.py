@@ -6,7 +6,7 @@ import jieba.analyse
 
 class MySpider(scrapy.Spider):
     name = 'roll_store_test'
-    sample_time = '2019-03-06 18:00:00' # Get the newst time from sql
+    sample_time = '2018-03-06 18:00:00' # Get the newst time from sql
     all_article_urls = []
 
     def __init__(self):
@@ -31,25 +31,27 @@ class MySpider(scrapy.Spider):
                        'https://www.cnbeta.com/category/soft.htm',
                        'https://www.cnbeta.com/category/music.htm',
                         ]
-
-        url='https://www.cnbeta.com/category/tech.htm'
-        yield scrapy.Request(url=url, callback=self.parse)
+        for url in cnbeta_urls:
+            yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
         # normal item article
         for infor in response.xpath('//div[@class="items-area"]'):
             links = infor.xpath('./div[@class="item"]/dl/dt/a/@href').extract()
-            tags = infor.xpath('./div[@class="item"]/div[@class="meta-data"]/label/text()').extract()
-            for (link,tag) in zip(links,tags):
+            # tags = infor.xpath('./div[@class="item"]/div[@class="meta-data"]/label/text()').extract()
+            for link in links:
+                if link[0] == "/":
+                    link = "https:" + link
                 if (link not in self.all_article_urls):
                     self.all_article_urls.append(link)
-                    yield scrapy.Request(url=link, meta={'link':link, 'tag':tag}, callback=self.parse_details)
+                    yield scrapy.Request(url=link, meta={'link':link}, callback=self.parse_details)
 
         # Top 6 hot small item
         for hot in response.xpath('//div[@class="cnbeta-hot-small-figure"]'):
             hot_links = hot.xpath('./div[@class="item"]/a/@href').extract()
             for url in hot_links:
-                # print(url.split('/')[-2])
+                if url[0] == "/":
+                    url = "https:" + url
                 if (url not in self.all_article_urls):
                     self.all_article_urls.append(url)
                     yield scrapy.Request(url=url, meta={'link':url}, callback=self.parse_details)
@@ -58,20 +60,22 @@ class MySpider(scrapy.Spider):
         for hot_est in response.xpath('//div[@class="cnbeta-hot-big-figure"]'):
             hot_est_link = hot_est.xpath('./a/@href').extract()
             for hot_url in hot_est_link:
+                if hot_url[0] == "/":
+                    hot_url = "https:" + hot_url
                 if (hot_url not in self.all_article_urls):
                     self.all_article_urls.append(hot_url)
                     yield scrapy.Request(url=hot_url, meta={'link':hot_url}, callback=self.parse_details)
 
     def switch_test_item(self,item):
         switcher = {
-            "tech": 0,
-            "movie": 1,
-            "music": 2,
-            "game": 3,
-            "comic": 4,
-            "science": 5,
-            "soft": 6,
-            "funny": 7,
+            "tech": 9,
+            "movie": 12,
+            "music": 12,
+            "game": 12,
+            "comic": 12,
+            "science": 9,
+            "soft": 9,
+            "funny": 12,
         }
         return switcher.get(item, "other")
 
@@ -100,13 +104,17 @@ class MySpider(scrapy.Spider):
         if (self.sample_time < final_time):
             # if news time late than the sample time
             # store in the item
+            item['id'] = "C"
             item['time'] = final_time
             item['source'] = final_source
-            item['link'] = response.meta['link']
+            item['url'] = response.meta['link']
             item['title'] = title
-            item['desc'] = detail_desc
-            item['tag'] = "" #
-            item['seg'] = final_seg
-            item['keyword'] = final_key
+            item['content'] = detail_desc
+            item['summary'] = detail_desc
+            item['class_id'] = detail_tag
+            item['terms'] = final_seg
+            item['keywords'] = final_key
+            item['place'] = ''
+            item['ranks'] = 0
             yield item
 
