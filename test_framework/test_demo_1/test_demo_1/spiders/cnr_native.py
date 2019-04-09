@@ -95,29 +95,29 @@ class MySpider(scrapy.Spider):
             print(link)
             yield scrapy.Request(url=link, callback=self.parse_type_1)
 
-        for link in type_2_urls:
-            print(link)
-            yield scrapy.Request(url=link, callback=self.parse_type_2)
+        # for link in type_2_urls:
+        #     print(link)
+        #     yield scrapy.Request(url=link, callback=self.parse_type_2)
 
         # Time Error : wrong xpath 3.28
         # Text Error : Exit index_2 pages in the text page
-        for link in type_3_urls:
-            print(link)
-            yield scrapy.Request(url=link, callback=self.parse_type_3)
+        # for link in type_3_urls:
+        #     print(link)
+        #     yield scrapy.Request(url=link, callback=self.parse_type_3)
 
         # Time Error : wrong xpath 3.28
-        for link in type_4_urls:
-            print(link)
-            yield scrapy.Request(url=link, callback=self.parse_type_4)
+        # for link in type_4_urls:
+        #     print(link)
+        #     yield scrapy.Request(url=link, callback=self.parse_type_4)
 
         # Time Error : wrong path 3.28 wh645 left
         # for link in type_5_urls:
         #     print(link)
         #     yield scrapy.Request(url=link, callback=self.parse_type_5)
 
-        for link in type_6_urls:
-            print(link)
-            yield scrapy.Request(url=link, callback=self.parse_type_6)
+        # for link in type_6_urls:
+        #     print(link)
+        #     yield scrapy.Request(url=link, callback=self.parse_type_6)
 
     '''
     type-1-native-international-other
@@ -205,8 +205,13 @@ class MySpider(scrapy.Spider):
         title = infor.xpath('.//div[@class="subject"]/h2/text()').extract()[0]
 
         # 图片新闻没有contentText
-        article = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]')
-        detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
+        article = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]//p')
+        # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
+        body = ""
+        count = 0
+        for p in article.xpath('normalize-space(string(.))'):
+            if (len(p.extract().strip().replace('\n', '').replace('\r', '').replace(u'\u3000',u'').replace(u'\xa0', u' ')) != 0):
+                body = body + "\n" + p.extract().strip().replace('\n', '').replace('\r', '')
 
         # print(title)
         # print(tag)
@@ -219,11 +224,12 @@ class MySpider(scrapy.Spider):
         # desc = infor.xpath('.//div[@class="article-summary"]/p')
         # detail_desc = desc.xpath('string(.)').extract()[0]
         # if detail_article != "":
+
         item['time'] = time
         item['source'] = final_source
         item['link'] = response.meta['link']
         item['title'] = title
-        item['desc'] = detail_article
+        item['desc'] = body
         item['tag'] = ""
         item['seg'] = ""
         item['keyword'] = ""

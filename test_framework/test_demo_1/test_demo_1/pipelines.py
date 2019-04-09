@@ -12,15 +12,15 @@ class TestDemo1Pipeline(object):
     def process_item(self, item, spider):
         # 获取当前工作目录
         base_dir = os.getcwd()
-        fiename = base_dir + '/news328_type_5.txt'
+        fiename = base_dir + '/news409.txt'
         # 从内存以追加的方式打开文件，并写入对应的数据
         with open(fiename, 'a') as f:
+            f.write("link:  " + item['link'] + '\n')
             # f.write("Tag:   " + item['tag'] + '\n')
             f.write("Title: " + item['title'] + '\n')
-            f.write("Time:  " + item['time'] + '\n')
-            f.write("Source:" + item['source'] + '\n')
-            f.write("link:  " + item['link'] + '\n')
-            f.write("Text:  " + item['text'] + '\n\n')
+            # f.write("Time:  " + item['time'] + '\n')
+            # f.write("Source:" + item['source'] + '\n')
+            f.write("Desc:  " + item['desc'] + '\n\n')
         return item
 
 class MysqlScrapyPipeline(object):

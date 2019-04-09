@@ -111,10 +111,10 @@ class MySpider(scrapy.Spider):
             item['title'] = title
             item['content'] = detail_desc
             item['summary'] = detail_desc
-            item['class_id'] = detail_tag
+            item['class_id'] = int(detail_tag)
             item['terms'] = final_seg
             item['keywords'] = final_key
             item['place'] = ''
-            item['ranks'] = 0
+            item['ranks'] = int(0)
             yield item
 
