@@ -3,28 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b2849f6-f155-4eea-bfb1-b8cd18ec986e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/entrypoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/entrypoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news222.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328001.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328002.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328003.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328004_pro.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328005.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328005b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328005c.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_2all.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news328_type_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news_demo1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/news409.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/pipelines.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/screen.png" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/screen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/Auto_Abstract.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +21,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="96" selection-end-column="90" />
+            <state relative-caret-position="1683">
+              <caret line="103" column="75" selection-start-line="103" selection-start-column="75" selection-end-line="103" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="28" lean-forward="true" selection-end-line="272" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -48,10 +43,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_all_summary.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="284">
+              <caret line="229" column="133" lean-forward="true" selection-start-line="229" selection-start-column="133" selection-end-line="229" selection-end-column="133" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -62,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="357">
+              <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
               <folding>
                 <element signature="e#193#202#0" expanded="true" />
               </folding>
@@ -83,8 +78,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="17">
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/textrank4zh/util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#124#232#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -145,12 +152,13 @@
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" />
         <option value="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" />
         <option value="$PROJECT_DIR$/test_demo_1/MySQLPipelineOnline.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/Auto_Abstract.py" />
         <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_all_summary.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
       </list>
     </option>
   </component>
@@ -168,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,10 +198,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\AllDoc\Github_Root\InternShip\test_framework\test_demo_1\test_demo_1" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -347,10 +360,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17553614" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17386723" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -358,7 +371,7 @@
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39592275" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="5" sideWeight="0.49947312" weight="0.94755244" />
+      <window_info anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="5" sideWeight="0.49947312" weight="0.9474249" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32832617" />
@@ -414,16 +427,8 @@
     <entry file="file://$PROJECT_DIR$/test_demo_1/geckodriver.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/news.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/news_demo1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news.txt" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news_demo1.txt" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/temp1.py" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/quotes-www.cnbeta.com.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -448,9 +453,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/news222.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/news222.txt" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/re_219.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -532,6 +535,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/Auto_Abstract.py" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1683">
+          <caret line="103" column="75" selection-start-line="103" selection-start-column="75" selection-end-line="103" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
@@ -542,8 +563,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/Auto_Abstract.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/textrank4zh/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#124#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="28" lean-forward="true" selection-end-line="272" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -552,51 +604,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="357">
+          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
           <folding>
             <element signature="e#193#202#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_all_summary.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="93" column="8" lean-forward="true" selection-start-line="93" selection-start-column="8" selection-end-line="96" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="284">
+          <caret line="229" column="133" lean-forward="true" selection-start-line="229" selection-start-column="133" selection-end-line="229" selection-end-column="133" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

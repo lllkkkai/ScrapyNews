@@ -12,14 +12,16 @@ class TestDemo1Pipeline(object):
     def process_item(self, item, spider):
         # 获取当前工作目录
         base_dir = os.getcwd()
-        fiename = base_dir + '/news409.txt'
+        fiename = base_dir + '/news414.txt'
         # 从内存以追加的方式打开文件，并写入对应的数据
-        with open(fiename, 'a') as f:
+        with open(fiename, 'a', encoding='utf-8') as f:
             f.write("link:  " + item['link'] + '\n')
             # f.write("Tag:   " + item['tag'] + '\n')
             f.write("Title: " + item['title'] + '\n')
             # f.write("Time:  " + item['time'] + '\n')
             # f.write("Source:" + item['source'] + '\n')
+            f.write("First: " + item["seg"] + '\n')
+            f.write("Second: " + item['keyword'] + '\n')
             f.write("Desc:  " + item['desc'] + '\n\n')
         return item
 
