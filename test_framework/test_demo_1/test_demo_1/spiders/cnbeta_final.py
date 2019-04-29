@@ -23,6 +23,13 @@ class MySpider(scrapy.Spider):
 
     def start_requests(self):
         cnbeta_urls = ['https://www.cnbeta.com/category/tech.htm',
+                       'https://www.cnbeta.com/category/movie.htm',
+                       'https://www.cnbeta.com/category/music.htm',
+                       'https://www.cnbeta.com/category/game.htm',
+                       'https://www.cnbeta.com/category/comic.htm',
+                       'https://www.cnbeta.com/category/funny.htm',
+                       'https://www.cnbeta.com/category/science.htm',
+                       'https://www.cnbeta.com/category/soft.htm',
                         ]
         for url in cnbeta_urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -85,8 +92,6 @@ class MySpider(scrapy.Spider):
         title = infor.xpath('.//h1/text()').extract()[0]
         desc = infor.xpath('.//div[@class="article-summary"]/p')
 
-
-
         content = infor.xpath('.//div[@class="article-content"]//p')
         #notiwant = content.xpath('./div[@class="article-topic"]')
         #content_2 = content.replace(notiwant,'')
@@ -96,38 +101,29 @@ class MySpider(scrapy.Spider):
             if(len(p.extract().strip().replace('\n','').replace('\r','')) != 0):
                 body = body + "**" + p.extract().strip().replace('\n','').replace('\r','')
 
-
-
-
-
-
         detail_desc = desc.xpath('normalize-space(string(.))').extract()[0]
-
-        temp_key = jieba.analyse.extract_tags(detail_desc,topK=3)
+        temp_key = jieba.analyse.extract_tags(detail_desc,topK=6)
         final_key = (",".join(temp_key))
-
         temp_seg = jieba.cut(detail_desc, cut_all=False)
-        final_seg = ("/".join(temp_seg))
-
+        final_seg = (",".join(temp_seg))
         detail_tag = self.switch_test_item((response.meta['link']).split('/')[-2])
+        # print(response.meta['link'])
+        # print(body)
 
-        print(response.meta['link'])
-        print(body)
-
-        # if (self.sample_time < final_time):
-        #     # if news time late than the sample time
-        #     # store in the item
-        #     item['id'] = "C"
-        #     item['time'] = final_time
-        #     item['source'] = final_source
-        #     item['url'] = response.meta['link']
-        #     item['title'] = title
-        #     item['content'] = content_detail
-        #     item['summary'] = detail_desc
-        #     item['class_id'] = int(detail_tag)
-        #     item['terms'] = final_seg
-        #     item['keywords'] = final_key
-        #     item['place'] = ''
-        #     item['ranks'] = int(0)
-        #     yield item
+        if (self.sample_time < final_time):
+            # if news time late than the sample time
+            # store in the item
+            item['time'] = final_time
+            item['source'] = final_source
+            item['href'] = response.meta['link']
+            item['newstitle'] = title
+            item['content'] = body
+            item['abstract'] = detail_desc
+            item['class_id'] = int(detail_tag)
+            item['terms'] = final_seg
+            item['keywords'] = final_key
+            #item['place'] = ''
+            item['ranking'] = int(0)
+            item['website'] = "cnbeta"
+            yield item
 

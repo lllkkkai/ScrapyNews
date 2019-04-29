@@ -9,27 +9,25 @@ import scrapy
 
 class TestDemo1Item(scrapy.Item):
     # define the fields for your item here like:
-    id = scrapy.Field()
-    title = scrapy.Field() #标题
-    summary = scrapy.Field()
+    newstitle = scrapy.Field() #标题
+    abstract = scrapy.Field()
     content = scrapy.Field()
     keywords = scrapy.Field()
     class_id = scrapy.Field()
     source = scrapy.Field()
-    ranks = scrapy.Field()
-    url = scrapy.Field()
+    ranking = scrapy.Field()
+    href = scrapy.Field()
     time = scrapy.Field()
     place = scrapy.Field()
     terms = scrapy.Field()
+    website = scrapy.Field()
+
+class ygnews_mp3_Item(scrapy.Item):
+    id = scrapy.Field()
+    title = scrapy.Field()
+    mp3_link = scrapy.Field()
+    time = scrapy.Field()
+    source_link = scrapy.Field()
 
 class ygnewsItem(scrapy.Item):
-    title = scrapy.Field() #标题
-    link = scrapy.Field() #链接
-    desc = scrapy.Field() #简述
-    time = scrapy.Field() #发布时间
-    tag = scrapy.Field()  #tag
-    source = scrapy.Field() # 稿源
-    keyword = scrapy.Field() #
-    seg = scrapy.Field() #
-
-
+    news = scrapy.Field()

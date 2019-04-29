@@ -1,6 +1,6 @@
 import pymysql.cursors
 
-class MySQLPipeline_cnr(object):
+class MySQLPipelineOnline(object):
     def __init__(self):
         # 连接数据库
         self.connect = pymysql.connect(
@@ -16,8 +16,8 @@ class MySQLPipeline_cnr(object):
 
     def process_item(self, item, spider):
         self.cursor.execute(
-            """insert into News(newstitle,href,content,classid,ranking,source,time,keywords,terms,website,abstract) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",  # 纯属python操作mysql知识，不熟悉请恶补
-            (item['newstitle'], item['href'], item['content'],item['class_id'], item['ranking'], item['source'], item['time'],item['keywords'],item['terms'],item['website'],item['abstract']))
+            """insert into Zhongguozhisheng(id,title,mp3_url,time) values(%s,%s,%s,%s)""",  # 纯属python操作mysql知识，不熟悉请恶补
+            (item['id'], item['title'], item['mp3_link'],item['time'],))
         # 提交sql语句
         self.connect.commit()
         return item  # 必须实现返回

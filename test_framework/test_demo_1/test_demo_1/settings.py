@@ -14,19 +14,19 @@ BOT_NAME = 'test_demo_1'
 SPIDER_MODULES = ['test_demo_1.spiders']
 NEWSPIDER_MODULE = 'test_demo_1.spiders'
 
-ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,} #存储为txt文件
+# ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,} #存储为txt文件
 
 # ITEM_PIPELINES = {
-#     'test_demo_1.MySQLPipeline.MySQLPipeline': 300,#cnbeta保存到mysql数据库
+#      'test_demo_1.MySQLPipelineCNRmp3.MySQLPipelineOnline': 300,#mp3保存到mysql数据库
 # }
 
 # ITEM_PIPELINES = {
 #     'test_demo_1.MySQLPipelineOnline.MySQLPipelineOnline': 300,#cnbeta保存到mysql数据库
 # }
 
-# ITEM_PIPELINES = {
-#     'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnbeta保存到mysql数据库
-# }
+ITEM_PIPELINES = {
+    'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnbeta保存到mysql数据库
+}
 
 
 

@@ -20,6 +20,7 @@ except:
     pass
     
 sentence_delimiters = ['?', '!', ';', '？', '！', '。', '；', '……', '…', '\n']
+# sentence_delimiters = ['\n']
 allow_speech_tags = ['an', 'i', 'j', 'l', 'n', 'nr', 'nrfg', 'ns', 'nt', 'nz', 't', 'v', 'vd', 'vn', 'eng']
 
 PY2 = sys.version_info[0] == 2

@@ -1,9 +1,9 @@
 import scrapy
 import re
-from test_demo_1.items import ygnewsItem
+import jieba.analyse
+from test_demo_1.items import TestDemo1Item
 import codecs
 from test_demo_1.textrank4zh import TextRank4Keyword, TextRank4Sentence
-
 
 class MySpider(scrapy.Spider):
     name = 'cnr_all_summary'
@@ -17,7 +17,96 @@ class MySpider(scrapy.Spider):
     def start_requests(self):
         type_1_base_urls = [
             'http://china.cnr.cn/yaowen/',
+            'http://news.cnr.cn/dj/',
+            'http://china.cnr.cn/xwwgf/',
+            'http://news.cnr.cn/comment/sp/',
+            'http://news.cnr.cn/comment/latest/',
+            'http://news.cnr.cn/native/gd/',
+            'http://news.cnr.cn/native/city/',
+            'http://news.cnr.cn/native/comment/',
+            'http://news.cnr.cn/local/tj/',
+            'http://news.cnr.cn/gjxw/gnews/',
+            'http://finance.cnr.cn/2014jingji/djbd/',
+            'http://finance.cnr.cn/2014jingji/yw/',
+            'http://finance.cnr.cn/2014jingji/jrlc/',
+            'http://finance.cnr.cn/jysk/',
+            'http://finance.cnr.cn/2014jingji/stock/',
+            'http://finance.cnr.cn/2014jingji/glwjr/',
+            'http://finance.cnr.cn/2014jingji/glwjr/',
+            'http://sports.cnr.cn/basket_ball/basketballhot/',
+            'http://sports.cnr.cn/news/',
+            'http://sports.cnr.cn/internal/news/'
+            'http://sports.cnr.cn/international/news/',
+            'http://sports.cnr.cn/synthesize/news/',
+            'http://sports.cnr.cn/ice_snow/ice_snow/',
+            'http://sports.cnr.cn/Industry/',
+            'http://sports.cnr.cn/Original/',
+            'http://edu.cnr.cn/list/',
+            'http://edu.cnr.cn/kaos/gk/',
+            'http://edu.cnr.cn/lxcg/',
+            'http://edu.cnr.cn/zxx/',
+            'http://edu.cnr.cn/zhic/',
+            'http://edu.cnr.cn/dj/',
+            'http://edu.cnr.cn/gc/',
+            'http://ent.cnr.cn/zx/',
+            'http://ent.cnr.cn/dj/',
+            'http://ent.cnr.cn/wy/',
+            'http://ent.cnr.cn/gy/',
+            'http://ent.cnr.cn/chuanmei/',
+            'http://www.cnr.cn/chanjing/gundong/',
+            'http://www.cnr.cn/chanjing/dujia/',
+            'http://www.cnr.cn/chanjing/guancha/',
+            'http://www.cnr.cn/chanjing/jujiao/',
+            'http://www.cnr.cn/chanjing/wenhua/',
+            'http://www.cnr.cn/chanjing/nengyuan/',
+            'http://www.cnr.cn/chanjing/fangchan/',
+            'http://www.cnr.cn/chanjing/jiadian/',
+            'http://www.cnr.cn/chanjing/kuaixiao/',
+            'http://www.cnr.cn/chanjing/huodong/',
+            'http://tech.cnr.cn/techds/',
+            'http://tech.cnr.cn/techit/',
+            'http://tech.cnr.cn/techhlw/',
+            'http://tech.cnr.cn/techyd/',
+            'http://tech.cnr.cn/digi/',
+            'http://tech.cnr.cn/techtj/',
+            'http://tech.cnr.cn/techgsrw/',
+            'http://tech.cnr.cn/techxp/',
+            'http://tech.cnr.cn/techtx/',
+            'http://tech.cnr.cn/techqyqs/',
+            'http://travel.cnr.cn/2011lvpd/gny/news/',
+            'http://travel.cnr.cn/2011lvpd/cjy/news/',
+            'http://travel.cnr.cn/hydt/',
+            'http://travel.cnr.cn/dj/',
+            'http://travel.cnr.cn/railway/',
+            'http://health.cnr.cn/jkjryw/',
+            'http://health.cnr.cn/jkysbj/',
+            'http://health.cnr.cn/xljt/',
+            'http://health.cnr.cn/my/',
+            'http://health.cnr.cn/s/',
+            'http://health.cnr.cn/populirization/',
+            'http://health.cnr.cn/jkbgt/',
+            'http://health.cnr.cn/jkgdxw/',
+            'http://health.cnr.cn/yg/',
+            'http://health.cnr.cn/qy/',
+            'http://auto.cnr.cn/2015rmgz/',
+            'http://auto.cnr.cn/zcxg/',
+            'http://gongyi.cnr.cn/news/',
+            'http://gongyi.cnr.cn/qiye/',
+            'http://gongyi.cnr.cn/star/',
+            'http://gongyi.cnr.cn/story/',
+            'http://gongyi.cnr.cn/huodong/',
+            'http://gongyi.cnr.cn/shalong/',
+            'http://gongyi.cnr.cn/point/',
+            'http://gongyi.cnr.cn/xingdong/',
+            'http://gongyi.cnr.cn/top/',
+            'http://country.cnr.cn/gundong/',
+            'http://country.cnr.cn/market/',
+            'http://country.cnr.cn/snsp/',
+            'http://country.cnr.cn/mantan/',
+            'http://country.cnr.cn/bangyang/',
+            'http://country.cnr.cn/xtxq/',
         ]
+
         type_2_base_urls = [
             'http://finance.cnr.cn/315/gz/',
             'http://finance.cnr.cn/txcj/',
@@ -25,12 +114,22 @@ class MySpider(scrapy.Spider):
         ]
         type_3_base_urls = [
             'http://military.cnr.cn/gz/',
+            'http://military.cnr.cn/zgjq/',
         ]
         type_4_base_urls = [
             'http://military.cnr.cn/gjjs/',
+            'http://military.cnr.cn/ycdj/',
+            'http://military.cnr.cn/zgjq/gcdt/',
+            'http://military.cnr.cn/zgjq/lj/',
+            'http://military.cnr.cn/zgjq/hj/',
+            'http://military.cnr.cn/zgjq/kj/',
+            'http://military.cnr.cn/zgjq/ep/',
         ]
         type_5_base_urls = [
             'http://auto.cnr.cn/zxss/',
+            'http://auto.cnr.cn/2015xc/',
+            'http://auto.cnr.cn/qczcjj/',
+            'http://auto.cnr.cn/ygbgt/',
         ]
         type_6_base_urls = [
             'http://news.cnr.cn/theory/',
@@ -45,7 +144,7 @@ class MySpider(scrapy.Spider):
             # print(url.split('/')[-3]) #get the origin tag (only in native,gjxw)
             type_1_urls.append(url)
             page = 1
-            while page < 5:    # if page < 10 you get 404 here deal it quick
+            while page < 3:    # if page < 10 you get 404 here deal it quick
                 detail_url = url + 'index_' + str(page) + '.html'
                 type_1_urls.append(detail_url)
                 page += 1
@@ -54,7 +153,7 @@ class MySpider(scrapy.Spider):
             # print(url.split('/')[-3]) #get the origin tag (only in native,gjxw)
             type_2_urls.append(url)
             page = 1
-            while page < 5:
+            while page < 3:
                 detail_url = url + 'index_' + str(page) + '.html'
                 type_2_urls.append(detail_url)
                 page += 1
@@ -99,29 +198,25 @@ class MySpider(scrapy.Spider):
             print(link)
             yield scrapy.Request(url=link, callback=self.parse_type_1)
 
-        # for link in type_2_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_2)
+        for link in type_2_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_2)
 
-        # Time Error : wrong xpath 3.28
-        # Text Error : Exit index_2 pages in the text page
-        # for link in type_3_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_3)
+        for link in type_3_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_3)
 
-        # Time Error : wrong xpath 3.28
-        # for link in type_4_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_4)
+        for link in type_4_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_4)
 
-        # Time Error : wrong path 3.28 wh645 left
-        # for link in type_5_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_5)
+        for link in type_5_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_5)
 
-        # for link in type_6_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_6)
+        for link in type_6_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_6)
 
     '''
     type-1-native-international-other
@@ -199,8 +294,40 @@ class MySpider(scrapy.Spider):
                 self.all_article_urls.append(link)
                 yield scrapy.Request(url=link, meta={'link':link}, callback=self.parse_details)
 
+    def switch_test_item(self,item):
+        switcher = {
+            "2014jkpd": 21,
+            "chanjing": 8,
+            "china": 1,
+            "comment": 6,
+            "dj": 1,
+            "ent": 12,
+            "gundong": 8,
+            "jingji": 8,
+            "jkgdxw": 21,
+            "jy": 20,
+            "list": 0,
+            "lvyou": 17,
+            "native": 1,
+            "newscenter": 0,
+            "tech": 9,
+            "techgd": 9,
+            "2013qcpd": 19,
+            "gongyi": 18,
+            "news": 1,
+            "ylzt": 18,
+            "zgxc": 1,
+            "jmhd": 4,
+            "js2014": 4,
+            "yc": 19,
+            "rdzx" : 19,
+            "hngd" : 19,
+            "theory": 0,
+        }
+        return switcher.get(item, "other")
+
     def parse_details(self,response):
-        item = ygnewsItem()
+        item = TestDemo1Item()
         # tag = response.xpath('//p[@class="daoHang"]/a/text()').extract()[1] # Bug Here !
         infor = response.xpath('//div[@class="article"]')
         time = infor.xpath('.//div[@class="subject"]/div[@class="source"]/span/text()').extract()[0]
@@ -209,82 +336,112 @@ class MySpider(scrapy.Spider):
         title = infor.xpath('.//div[@class="subject"]/h2/text()').extract()[0]
 
         # 图片新闻没有contentText
-        article = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]//p')
-        # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
+        content = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]//p')
         body = ""
-        count = 0
-        first_part = ""
-        # count表示自然段数
-        for p in article.xpath('normalize-space(string(.))'):
-            if (count != 0):
-                count += 1
-                if (len(p.extract().strip().replace('\n', '').replace('\r', '').replace(u'\u3000',u'').replace(u'\xa0', u' ')) != 0):
-                    body = body + "\n" + p.extract().strip().replace('\n', '').replace('\r', '')
-                    if(self.countCharacters(first_part) < 150):
-                        final_first_part = first_part + p.extract().strip().replace('\n', '').replace('\r', '')
-                        if(self.countCharacters(final_first_part) < 300):
-                            first_part = final_first_part
+        terms = ""
+        for p in content.xpath('string(.)'):
+            if (len(p.extract().strip().replace('\n', '').replace('\r', '')) != 0):
+                body = body + "**" + p.extract().strip().replace('\n', '').replace('\r', '')
+                terms = terms + p.extract().strip().replace('\n', '').replace('\r', '')
 
-            if (count == 0):
-                count += 1
-                if (len(p.extract().strip().replace('\n', '').replace('\r', '').replace(u'\u3000',u'').replace(u'\xa0', u' ')) != 0):
-                    body = p.extract().strip().replace('\n', '').replace('\r', '')
-                    first_part = body
+        # jieba here
+        temp_key = jieba.analyse.extract_tags(terms, topK=6)
+        final_key = (",".join(temp_key))
+        temp_seg = jieba.cut(terms, cut_all=False)
+        final_seg = (",".join(temp_seg))
 
-        second_part = ""
-        tr4s = TextRank4Sentence()
-        tr4s.analyze(text=body, lower=True, source='all_filters')
-        for item in tr4s.get_key_sentences(num=3):
-            second_part = second_part + item.sentence + "。"
-
-
-
-
-        # print(title)
-        # print(tag)
-        # print(response.meta['link'])
-        # print(time)
-
-        #print(sources.replace('来源：',''))
-        #print(detail_article)
-
-        # desc = infor.xpath('.//div[@class="article-summary"]/p')
-        # detail_desc = desc.xpath('string(.)').extract()[0]
-        # if detail_article != "":
-
-        item['time'] = time
-        item['source'] = final_source
-        item['link'] = response.meta['link']
-        item['title'] = title
-        item['desc'] = body
-        item['tag'] = (response.meta['link']).split('/')[3]
-        item['seg'] = first_part
-        item['keyword'] = second_part
-        return item
+        if terms != "":
+            item['newstitle'] = title
+            item['time'] = time
+            item['source'] = final_source
+            item['href'] = response.meta['link']
+            item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
+            item['content'] = body
+            #item['place'] = self.switch_test_item((response.meta['link']).split('/')[3])
+            # item['place'] = (response.meta['link']).split('/')[3]
+            item['terms'] = final_seg
+            item['keywords'] = final_key
+            item['ranking'] = int(0)
+            # item['abstract'] = ""
+            item['website'] = "cnr"
+            return item
+        # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
+        # body = ""
+        # count = 0
+        # first_part = ""
+        # # count表示自然段数
+        # for p in article.xpath('normalize-space(string(.))'):
+        #     if (count != 0):
+        #         count += 1
+        #         if (len(p.extract().strip().replace('\n', '').replace('\r', '').replace(u'\u3000',u'').replace(u'\xa0', u' ')) != 0):
+        #             body = body + "\n" + p.extract().strip().replace('\n', '').replace('\r', '')
+        #             if(self.countCharacters(first_part) < 150):
+        #                 final_first_part = first_part + p.extract().strip().replace('\n', '').replace('\r', '')
+        #                 if(self.countCharacters(final_first_part) < 300):
+        #                     first_part = final_first_part
+        #
+        #     if (count == 0):
+        #         count += 1
+        #         if (len(p.extract().strip().replace('\n', '').replace('\r', '').replace(u'\u3000',u'').replace(u'\xa0', u' ')) != 0):
+        #             body = p.extract().strip().replace('\n', '').replace('\r', '')
+        #             first_part = body
+        #
+        # first_part_list = first_part.split('。')
+        # second_part = ""
+        # tr4s = TextRank4Sentence()
+        # tr4s.analyze(text=body, lower=True, source='all_filters')
+        # for item in tr4s.get_key_sentences(num=7):
+        #     for p in first_part_list:
+        #         flag = 0
+        #         if item.sentence == p:
+        #             flag = 1
+        #             break
+        #
+        #         if item.index == 0:
+        #             flag = 1
+        #             break
+        #     if flag == 0:
+        #         second_part = second_part + item.sentence + "。"
+        #
+        # summary = first_part + second_part
 
     def parse_details_type_3(self,response):
-        item = ygnewsItem()
+        item = TestDemo1Item()
         infor = response.xpath('//div[@class="wh635 left"]/div[@class="wh610 left"]')
         time = infor.xpath('./p[@class="f12_898787 lh20 left"]/span[@id="pubtime_baidu"]/text()').extract()
         final_time = time[0]
         source = infor.xpath('./p[@class="f12_898787 lh20 left"]/span[@id="source_baidu"]/a/text()').extract()
-        #final_source = source.replace("来源：","")
         final_source = source[0]
         title = infor.xpath('.//h1[@class="f24 lh40 fb txtcenter f12_292929 yahei"]/text()').extract()[0]
 
         # 图片新闻没有contentText
-        article = infor.xpath('.//div[@class="left f12_292929 sanji_left yahei"]/div[@class="TRS_Editor"]')
-        detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u'')
+        content = infor.xpath('.//div[@class="left f12_292929 sanji_left yahei"]/div[@class="TRS_Editor"]//p')
+        #detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u'')
+        body = ""
+        terms = ""
+        for p in content.xpath('string(.)'):
+            if (len(p.extract().strip().replace('\n', '').replace('\r', '')) != 0):
+                body = body + "**" + p.extract().strip().replace('\n', '').replace('\r', '')
+                terms = terms + p.extract().strip().replace('\n', '').replace('\r', '')
 
-        if detail_article != "":
+        temp_key = jieba.analyse.extract_tags(terms, topK=6)
+        final_key = (",".join(temp_key))
+        temp_seg = jieba.cut(terms, cut_all=False)
+        final_seg = (",".join(temp_seg))
+
+        if terms != "":
             item['time'] = final_time
             item['source'] = final_source
-            item['link'] = response.meta['link']
-            item['title'] = title
-            item['desc'] = detail_article
-            item['tag'] = ""
-            item['seg'] = ""
-            item['keyword'] = ""
+            item['href'] = response.meta['link']
+            item['newstitle'] = title
+            item['content'] = body
+            item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
+            item['terms'] = final_seg
+            item['keywords'] = final_key
+            item['website'] = "cnr"
+            #item['abstract'] = ""
+            #item['place'] = (response.meta['link']).split('/')[3]
+            item['ranking'] = int(0)
 
             return item
 

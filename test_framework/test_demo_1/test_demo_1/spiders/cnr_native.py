@@ -1,5 +1,5 @@
 import scrapy
-from test_demo_1.items import ygnewsItem
+from test_demo_1.items import ygnews_mp3_Item
 
 class MySpider(scrapy.Spider):
     name = 'cnr_all_spider'
