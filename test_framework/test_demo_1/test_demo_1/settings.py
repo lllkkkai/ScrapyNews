@@ -24,9 +24,9 @@ NEWSPIDER_MODULE = 'test_demo_1.spiders'
 #     'test_demo_1.MySQLPipelineOnline.MySQLPipelineOnline': 300,#cnbeta保存到mysql数据库
 # }
 
-ITEM_PIPELINES = {
-    'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnbeta保存到mysql数据库
-}
+# ITEM_PIPELINES = {
+#     'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnbeta保存到mysql数据库
+# }
 
 
 
