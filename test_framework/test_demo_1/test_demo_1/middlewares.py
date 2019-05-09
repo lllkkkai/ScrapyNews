@@ -109,14 +109,15 @@ class SeleniumMiddleware(object):
 
     def process_request(self, request, spider):
         # if spider.name == '132':
-        cnbeta_urls = ['https://www.cnbeta.com/category/tech.htm',
-                       'https://www.cnbeta.com/category/game.htm',
-                       'https://www.cnbeta.com/category/funny.htm',
-                       'https://www.cnbeta.com/category/science.htm',
-                       'https://www.cnbeta.com/category/comic.htm',
-                       'https://www.cnbeta.com/category/movie.htm',
-                       'https://www.cnbeta.com/category/soft.htm',
-                       'https://www.cnbeta.com/category/music.htm',
+        cnbeta_urls = [
+                       # 'https://www.cnbeta.com/category/tech.htm',
+                       # 'https://www.cnbeta.com/category/game.htm',
+                       # 'https://www.cnbeta.com/category/funny.htm',
+                       # 'https://www.cnbeta.com/category/science.htm',
+                       # 'https://www.cnbeta.com/category/comic.htm',
+                       # 'https://www.cnbeta.com/category/movie.htm',
+                       # 'https://www.cnbeta.com/category/soft.htm',
+                       # 'https://www.cnbeta.com/category/music.htm',
                        ]
 
         if request.url in cnbeta_urls :

@@ -23,11 +23,13 @@ class TestDemo1Item(scrapy.Item):
     website = scrapy.Field()
 
 class ygnews_mp3_Item(scrapy.Item):
-    id = scrapy.Field()
-    title = scrapy.Field()
-    mp3_link = scrapy.Field()
+    newstitle = scrapy.Field()
+    audiosurl = scrapy.Field()
     time = scrapy.Field()
-    source_link = scrapy.Field()
+    source = scrapy.Field()
+    href = scrapy.Field()
+    classid = scrapy.Field()
+    website = scrapy.Field()
 
 class ygnewsItem(scrapy.Item):
     news = scrapy.Field()

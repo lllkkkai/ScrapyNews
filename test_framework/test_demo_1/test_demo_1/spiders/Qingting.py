@@ -14,16 +14,22 @@ class MySpider(scrapy.Spider):
     def start_requests(self):
         base_urls = [
             'https://www.qingting.fm/channels/139566',
+            'https://www.qingting.fm/channels/46128/',
+            'https://www.qingting.fm/channels/284552/',
+            'https://www.qingting.fm/channels/138208/',
+            'https://www.qingting.fm/channels/283966',
+            'https://www.qingting.fm/channels/41504/',
+            'https://www.qingting.fm/channels/145754/',
         ]
 
         for link in base_urls:
             print(link)
-            yield scrapy.Request(url=link, callback=self.parse_details)
+            yield scrapy.Request(url=link, meta={'link':link}, callback=self.parse_details)
 
     def parse_details(self,response):
         infor = response.xpath('.//script[@*]//text()')
 
-        rep = requests.get('https://www.qingting.fm/channels/283966/')
+        rep = requests.get(response.meta['link'])
         HTML = rep.content
         tree = html.fromstring(HTML)
         Html = html.tostring(tree).decode()
@@ -39,6 +45,7 @@ class MySpider(scrapy.Spider):
             item['mp3_link'] = 'https://od.qingting.fm/' + i['file_path']
             item['title'] = i['name']
             item['time'] = i['update_time']
+            item['source_link'] = response.meta['link']
             yield item
 
 

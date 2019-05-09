@@ -9,17 +9,17 @@ class MySpider(scrapy.Spider):
     sample_time = '2018-03-06 18:00:00' # Get the newst time from sql
     all_article_urls = []
 
-    def __init__(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
-        self.browser = webdriver.Chrome(executable_path=(r'C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'), chrome_options=chrome_options)
-        self.browser.set_page_load_timeout(120)
+    # def __init__(self):
+    #     chrome_options = Options()
+    #     chrome_options.add_argument("--headless")
+    #     chrome_options.add_argument('--disable-gpu')
+    #     chrome_options.add_argument('--no-sandbox')
+    #     self.browser = webdriver.Chrome(executable_path=(r'C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'), chrome_options=chrome_options)
+    #     self.browser.set_page_load_timeout(120)
 
-    def closed(self, spider):
-        print("spider closed")
-        self.browser.close()
+    # def closed(self, spider):
+    #     print("spider closed")
+    #     self.browser.close()
 
     def start_requests(self):
         cnbeta_urls = ['https://www.cnbeta.com/category/tech.htm',
