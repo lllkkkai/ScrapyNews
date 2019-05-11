@@ -18,95 +18,95 @@ class MySpider(scrapy.Spider):
 
     def start_requests(self):
         type_1_base_urls = [
-            # 'http://china.cnr.cn/yaowen/',
-            # 'http://news.cnr.cn/dj/',
-            # 'http://china.cnr.cn/xwwgf/',
-            # 'http://news.cnr.cn/comment/sp/',
-            # 'http://news.cnr.cn/comment/latest/',
-            # 'http://news.cnr.cn/native/gd/',
+            'http://china.cnr.cn/yaowen/',
+            'http://news.cnr.cn/dj/',
+            'http://china.cnr.cn/xwwgf/',
+            'http://news.cnr.cn/comment/sp/',
+            'http://news.cnr.cn/comment/latest/',
+            'http://news.cnr.cn/native/gd/',
             'http://news.cnr.cn/native/city/',
-            # 'http://news.cnr.cn/native/comment/',
-            # 'http://news.cnr.cn/local/tj/',
-            # 'http://news.cnr.cn/gjxw/gnews/',
-            # 'http://finance.cnr.cn/2014jingji/djbd/',
-            # 'http://finance.cnr.cn/2014jingji/yw/',
-            # 'http://finance.cnr.cn/2014jingji/jrlc/',
-            # 'http://finance.cnr.cn/jysk/',
-            # 'http://finance.cnr.cn/2014jingji/stock/',
-            # 'http://finance.cnr.cn/2014jingji/glwjr/',
-            # 'http://finance.cnr.cn/2014jingji/glwjr/',
-            # 'http://sports.cnr.cn/basket_ball/basketballhot/',
-            # 'http://sports.cnr.cn/news/',
-            # 'http://sports.cnr.cn/internal/news/'
-            # 'http://sports.cnr.cn/international/news/',
-            # 'http://sports.cnr.cn/synthesize/news/',
-            # 'http://sports.cnr.cn/ice_snow/ice_snow/',
-            # 'http://sports.cnr.cn/Industry/',
-            # 'http://sports.cnr.cn/Original/',
-            # 'http://edu.cnr.cn/list/',
-            # 'http://edu.cnr.cn/kaos/gk/',
-            # 'http://edu.cnr.cn/lxcg/',
-            # 'http://edu.cnr.cn/zxx/',
-            # 'http://edu.cnr.cn/zhic/',
-            # 'http://edu.cnr.cn/dj/',
-            # 'http://edu.cnr.cn/gc/',
-            # 'http://ent.cnr.cn/zx/',
-            # 'http://ent.cnr.cn/dj/',
-            # 'http://ent.cnr.cn/wy/',
-            # 'http://ent.cnr.cn/gy/',
-            # 'http://ent.cnr.cn/chuanmei/',
-            # 'http://www.cnr.cn/chanjing/gundong/',
-            # 'http://www.cnr.cn/chanjing/dujia/',
-            # 'http://www.cnr.cn/chanjing/guancha/',
-            # 'http://www.cnr.cn/chanjing/jujiao/',
-            # 'http://www.cnr.cn/chanjing/wenhua/',
-            # 'http://www.cnr.cn/chanjing/nengyuan/',
-            # 'http://www.cnr.cn/chanjing/fangchan/',
-            # 'http://www.cnr.cn/chanjing/jiadian/',
-            # 'http://www.cnr.cn/chanjing/kuaixiao/',
-            # 'http://www.cnr.cn/chanjing/huodong/',
-            # 'http://tech.cnr.cn/techds/',
-            # 'http://tech.cnr.cn/techit/',
-            # 'http://tech.cnr.cn/techhlw/',
-            # 'http://tech.cnr.cn/techyd/',
-            # 'http://tech.cnr.cn/digi/',
-            # 'http://tech.cnr.cn/techtj/',
-            # 'http://tech.cnr.cn/techgsrw/',
-            # 'http://tech.cnr.cn/techxp/',
-            # 'http://tech.cnr.cn/techtx/',
-            # 'http://tech.cnr.cn/techqyqs/',
-            # 'http://travel.cnr.cn/2011lvpd/gny/news/',
-            # 'http://travel.cnr.cn/2011lvpd/cjy/news/',
-            # 'http://travel.cnr.cn/hydt/',
-            # 'http://travel.cnr.cn/dj/',
-            # 'http://travel.cnr.cn/railway/',
-            # 'http://health.cnr.cn/jkjryw/',
-            # 'http://health.cnr.cn/jkysbj/',
-            # 'http://health.cnr.cn/xljt/',
-            # 'http://health.cnr.cn/my/',
-            # 'http://health.cnr.cn/s/',
-            # 'http://health.cnr.cn/populirization/',
-            # 'http://health.cnr.cn/jkbgt/',
-            # 'http://health.cnr.cn/jkgdxw/',
-            # 'http://health.cnr.cn/yg/',
-            # 'http://health.cnr.cn/qy/',
-            # 'http://auto.cnr.cn/2015rmgz/',
-            # 'http://auto.cnr.cn/zcxg/',
-            # 'http://gongyi.cnr.cn/news/',
-            # 'http://gongyi.cnr.cn/qiye/',
-            # 'http://gongyi.cnr.cn/star/',
-            # 'http://gongyi.cnr.cn/story/',
-            # 'http://gongyi.cnr.cn/huodong/',
-            # 'http://gongyi.cnr.cn/shalong/',
-            # 'http://gongyi.cnr.cn/point/',
-            # 'http://gongyi.cnr.cn/xingdong/',
-            # 'http://gongyi.cnr.cn/top/',
-            # 'http://country.cnr.cn/gundong/',
-            # 'http://country.cnr.cn/market/',
-            # 'http://country.cnr.cn/snsp/',
-            # 'http://country.cnr.cn/mantan/',
-            # 'http://country.cnr.cn/bangyang/',
-            # 'http://country.cnr.cn/xtxq/',
+            'http://news.cnr.cn/native/comment/',
+            'http://news.cnr.cn/local/tj/',
+            'http://news.cnr.cn/gjxw/gnews/',
+            'http://finance.cnr.cn/2014jingji/djbd/',
+            'http://finance.cnr.cn/2014jingji/yw/',
+            'http://finance.cnr.cn/2014jingji/jrlc/',
+            'http://finance.cnr.cn/jysk/',
+            'http://finance.cnr.cn/2014jingji/stock/',
+            'http://finance.cnr.cn/2014jingji/glwjr/',
+            'http://finance.cnr.cn/2014jingji/glwjr/',
+            'http://sports.cnr.cn/basket_ball/basketballhot/',
+            'http://sports.cnr.cn/news/',
+            'http://sports.cnr.cn/internal/news/'
+            'http://sports.cnr.cn/international/news/',
+            'http://sports.cnr.cn/synthesize/news/',
+            'http://sports.cnr.cn/ice_snow/ice_snow/',
+            'http://sports.cnr.cn/Industry/',
+            'http://sports.cnr.cn/Original/',
+            'http://edu.cnr.cn/list/',
+            'http://edu.cnr.cn/kaos/gk/',
+            'http://edu.cnr.cn/lxcg/',
+            'http://edu.cnr.cn/zxx/',
+            'http://edu.cnr.cn/zhic/',
+            'http://edu.cnr.cn/dj/',
+            'http://edu.cnr.cn/gc/',
+            'http://ent.cnr.cn/zx/',
+            'http://ent.cnr.cn/dj/',
+            'http://ent.cnr.cn/wy/',
+            'http://ent.cnr.cn/gy/',
+            'http://ent.cnr.cn/chuanmei/',
+            'http://www.cnr.cn/chanjing/gundong/',
+            'http://www.cnr.cn/chanjing/dujia/',
+            'http://www.cnr.cn/chanjing/guancha/',
+            'http://www.cnr.cn/chanjing/jujiao/',
+            'http://www.cnr.cn/chanjing/wenhua/',
+            'http://www.cnr.cn/chanjing/nengyuan/',
+            'http://www.cnr.cn/chanjing/fangchan/',
+            'http://www.cnr.cn/chanjing/jiadian/',
+            'http://www.cnr.cn/chanjing/kuaixiao/',
+            'http://www.cnr.cn/chanjing/huodong/',
+            'http://tech.cnr.cn/techds/',
+            'http://tech.cnr.cn/techit/',
+            'http://tech.cnr.cn/techhlw/',
+            'http://tech.cnr.cn/techyd/',
+            'http://tech.cnr.cn/digi/',
+            'http://tech.cnr.cn/techtj/',
+            'http://tech.cnr.cn/techgsrw/',
+            'http://tech.cnr.cn/techxp/',
+            'http://tech.cnr.cn/techtx/',
+            'http://tech.cnr.cn/techqyqs/',
+            'http://travel.cnr.cn/2011lvpd/gny/news/',
+            'http://travel.cnr.cn/2011lvpd/cjy/news/',
+            'http://travel.cnr.cn/hydt/',
+            'http://travel.cnr.cn/dj/',
+            'http://travel.cnr.cn/railway/',
+            'http://health.cnr.cn/jkjryw/',
+            'http://health.cnr.cn/jkysbj/',
+            'http://health.cnr.cn/xljt/',
+            'http://health.cnr.cn/my/',
+            'http://health.cnr.cn/s/',
+            'http://health.cnr.cn/populirization/',
+            'http://health.cnr.cn/jkbgt/',
+            'http://health.cnr.cn/jkgdxw/',
+            'http://health.cnr.cn/yg/',
+            'http://health.cnr.cn/qy/',
+            'http://auto.cnr.cn/2015rmgz/',
+            'http://auto.cnr.cn/zcxg/',
+            'http://gongyi.cnr.cn/news/',
+            'http://gongyi.cnr.cn/qiye/',
+            'http://gongyi.cnr.cn/star/',
+            'http://gongyi.cnr.cn/story/',
+            'http://gongyi.cnr.cn/huodong/',
+            'http://gongyi.cnr.cn/shalong/',
+            'http://gongyi.cnr.cn/point/',
+            'http://gongyi.cnr.cn/xingdong/',
+            'http://gongyi.cnr.cn/top/',
+            'http://country.cnr.cn/gundong/',
+            'http://country.cnr.cn/market/',
+            'http://country.cnr.cn/snsp/',
+            'http://country.cnr.cn/mantan/',
+            'http://country.cnr.cn/bangyang/',
+            'http://country.cnr.cn/xtxq/',
         ]
 
         type_2_base_urls = [
@@ -200,25 +200,25 @@ class MySpider(scrapy.Spider):
             print(link)
             yield scrapy.Request(url=link, callback=self.parse_type_1)
 
-        # for link in type_2_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_2)
-        #
-        # for link in type_3_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_3)
-        #
-        # for link in type_4_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_4)
-        #
-        # for link in type_5_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_5)
-        #
-        # for link in type_6_urls:
-        #     print(link)
-        #     yield scrapy.Request(url=link, callback=self.parse_type_6)
+        for link in type_2_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_2)
+
+        for link in type_3_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_3)
+
+        for link in type_4_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_4)
+
+        for link in type_5_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_5)
+
+        for link in type_6_urls:
+            print(link)
+            yield scrapy.Request(url=link, callback=self.parse_type_6)
 
     '''
     type-1-native-international-other

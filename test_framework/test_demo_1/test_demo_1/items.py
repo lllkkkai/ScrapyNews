@@ -30,6 +30,21 @@ class ygnews_mp3_Item(scrapy.Item):
     href = scrapy.Field()
     classid = scrapy.Field()
     website = scrapy.Field()
+    content = scrapy.Field()
+    keywords = scrapy.Field()
+    ttsTag = scrapy.Field()
+    ranking = scrapy.Field()
+
+class QingTing_mp3_Item(scrapy.Item):
+    newstitle = scrapy.Field()
+    audiosurl = scrapy.Field()
+    time = scrapy.Field()
+    source = scrapy.Field()
+    classid = scrapy.Field()
+    website = scrapy.Field()
+    keywords = scrapy.Field()
+    ttsTag = scrapy.Field()
+    ranking = scrapy.Field()
 
 class ygnewsItem(scrapy.Item):
     news = scrapy.Field()

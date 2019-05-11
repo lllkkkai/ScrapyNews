@@ -1,50 +1,32 @@
 import scrapy
-import re
 from test_demo_1.items import ygnews_mp3_Item
-import pymysql.cursors
-import html as ht
-import requests
-from lxml import html
-import json
+import jieba.analyse
 
 class MySpider(scrapy.Spider):
     sql_time = '2018-01-01 00:00:00'
     name = 'cnr_final_m3a'
     all_article_urls = []
     mp3_id = 0
+    stop_words = [',', '.', '?', ':', ';', '"', '\'', '/', '+', '-', '[', ']', '{', '}', '@', '#', '$', '%', '^', '&',
+                  '*', '(', ')', '=', '<', '>', '！', '，', '。', '：', '；', '“', '”', '‘', '’', '？', '《', '》', '—', '（',
+                  '）', ' ']
 
     def start_requests(self):
         type_1_base_urls = [
             'http://china.cnr.cn/news/',
         ]
-        type_2_base_urls = [
-            'https://www.qingting.fm/channels/138208/'
-        ]
         type_1_urls = []
-        type_2_urls = []
-
         for url in type_1_base_urls:
             type_1_urls.append(url)
             page = 1
-            while page < 10:
+            while page < 12:
                 detail_url = url + 'index_' + str(page) + '.html'
                 type_1_urls.append(detail_url)
-                page += 1
-
-        for url in type_2_base_urls:
-            page = 1
-            while page < 20:
-                detail_url = url + str(page)
-                type_2_urls.append(detail_url)
                 page += 1
 
         for link in type_1_urls:
             print(link)
             yield scrapy.Request(url=link, callback=self.parse_type_1)
-
-        for link in type_2_urls:
-            print(link)
-            yield scrapy.Request(url=link, meta={'link': link}, callback=self.parse_details_QingTing)
 
         # self.connect = pymysql.connect(
         #     host='127.0.0.1',  # 数据库地址
@@ -75,13 +57,33 @@ class MySpider(scrapy.Spider):
         # tag = response.xpath('//p[@class="daoHang"]/a/text()').extract()[1] # Bug Here !
         infor = response.xpath('//div[@class="article"]')
         time = infor.xpath('.//div[@class="subject"]/div[@class="source"]/span/text()').extract()[0]
+        content = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]//p[not(contains(@align,"center"))][not(contains(@style,"text-align: center;"))]')
+        #content_pa = infor.xpath('.//div[@class="articleMain clearfix"]/div[@class="content"]/div[@class="contentText"]//p[not(contains(@align,"center"))][not(contains(@style,"text-align: center;"))]//a')
+        body = ""
+
+        for p in content.xpath('string(.)'):
+            if (len(p.extract().strip().replace('\n', '').replace('\r', '')) != 0):
+                body = body + "**" + p.extract().strip().replace('\n', '').replace('\r', '')
+
         # source = infor.xpath('.//div[@class="subject"]/div[@class="source"]/span/text()').extract()[1]
         # final_source = source.replace("来源：","")
         title = infor.xpath('.//div[@class="subject"]/h2/text()').extract()[0]
+        start_key = ""
+        title_no_space = title.strip()
+        title_seg = jieba.cut(title_no_space, cut_all=False)
+        for word in title_seg:
+            if word not in self.stop_words:
+                if word != '\t':
+                    start_key += word
+                    start_key += ","
+        # start_key = (",".join(title_seg))
+        keywords = start_key
+
         audio_list = infor.xpath('.//input[@type="hidden"]/@value').extract()
         audio = infor.xpath('.//input[@type="hidden"]/@value').extract_first()
         if len(audio_list):
             if (time > str(self.sql_time)):
+                item['content'] = body
                 item['time'] = time
                 item['audiosurl'] = audio
                 item['href'] = response.meta['link']
@@ -89,26 +91,7 @@ class MySpider(scrapy.Spider):
                 item['classid'] = int(31)
                 item['website'] = 'cnr_mp3'
                 item['source'] = 'cnr_mp3'
+                item['keywords'] = keywords
+                item['ttsTag'] = int(1)
+                item['ranking'] = int(1)
                 return item
-
-    def parse_details_QingTing(self,response):
-        rep = requests.get(response.meta['link'])
-        HTML = rep.content
-        tree = html.fromstring(HTML)
-        Html = html.tostring(tree).decode()
-
-        r = re.findall(r'<script type="text/javascript">\n([\s\S]+?)</script>', ht.unescape(Html), re.M)
-        str = r[0].replace("window.__initStores=","")
-        d = json.loads(str)
-
-        list = d['AlbumStore']['plist']
-        for i in list:
-            item = ygnews_mp3_Item()
-            item['audiosurl'] = 'https://od.qingting.fm/' + i['file_path']
-            item['newstitle'] = i['name']
-            item['time'] = i['update_time']
-            item['href'] = ''
-            item['classid'] = int(31)
-            item['website'] = 'cnr_mp3'
-            item['source'] = 'cnr_mp3'
-            yield item

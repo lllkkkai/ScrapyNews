@@ -1,6 +1,6 @@
 import pymysql.cursors
 
-class CNR_mp3_Online(object):
+class Qingting_mp3_Online(object):
     def __init__(self):
         # 连接数据库
         self.connect = pymysql.connect(
@@ -16,8 +16,8 @@ class CNR_mp3_Online(object):
 
     def process_item(self, item, spider):
         self.cursor.execute(
-            """insert into News(newstitle,classid,source,href,audiosurl,time,website,content,keywords,ranking,ttsTag) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",  # 纯属python操作mysql知识，不熟悉请恶补
-            (item['newstitle'], item['classid'],item['source'],item['href'],item['audiosurl'], item['time'],item['website'],item['content'],item['keywords'],item['ranking'],item['ttsTag']))
+            """insert into News(newstitle,classid,source,audiosurl,time,website,keywords,ranking,ttsTag) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)""",  # 纯属python操作mysql知识，不熟悉请恶补
+            (item['newstitle'], item['classid'],item['source'],item['audiosurl'], item['time'],item['website'],item['keywords'],item['ranking'],item['ttsTag']))
         # 提交sql语句
         self.connect.commit()
         return item  # 必须实现返回
