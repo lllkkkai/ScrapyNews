@@ -13,40 +13,32 @@ BOT_NAME = 'test_demo_1'
 
 SPIDER_MODULES = ['test_demo_1.spiders']
 NEWSPIDER_MODULE = 'test_demo_1.spiders'
-
+COMMANDS_MODULE = 'test_demo_1.commands'
 # ITEM_PIPELINES={'test_demo_1.pipelines.TestDemo1Pipeline':300,} #存储为txt文件
 
 # ITEM_PIPELINES = {
-#      'test_demo_1.MySQLPipelineCNRmp3.MySQLPipelineOnline': 300,#mp3保存到mysql数据库
+#     'test_demo_1.cnbeta_text_sql.MySQLPipelineOnline': 300,   # cnbeta text save mysql
 # }
 
 # ITEM_PIPELINES = {
-#     'test_demo_1.MySQLPipelineOnline.MySQLPipelineOnline': 300,#cnbeta保存到mysql数据库
-# }
-
-ITEM_PIPELINES = {
-    'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnr保存到mysql数据库
-}
-
-# ITEM_PIPELINES = {
-#     'test_demo_1.LocalPipeline.LocalPipeline': 300, # local sql
+#     'test_demo_1.cnr_text_sql.MySQLPipeline_cnr': 300,    # cnr text save mysql
 # }
 
 # ITEM_PIPELINES = {
-#     'test_demo_1.CNR_mp3_Online.CNR_mp3_Online': 300, # online sql
+#     'test_demo_1.cnr_mp3_sql.CNR_mp3_Online': 300,    # cnr mp3 save mysql
 # }
 
 # ITEM_PIPELINES = {
-#   'test_demo_1.Qingting_mp3_Online.Qingting_mp3_Online': 300, # qing ting online sql
+#   'test_demo_1.qingting_mp3_sql.Qingting_mp3_Online': 300,    # qingting mp3 save mysql
 # }
 
 #Mysql数据库的配置信息
-MYSQL_HOST = '127.0.0.1'
-MYSQL_DBNAME = 'newsdata'         #数据库名字，请修改
-MYSQL_USER = 'root'             #数据库账号，请修改
-MYSQL_PASSWD = ''         #数据库密码，请修改
-
-MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
+# MYSQL_HOST = '127.0.0.1'
+# MYSQL_DBNAME = 'newsdata'         #数据库名字，请修改
+# MYSQL_USER = 'root'             #数据库账号，请修改
+# MYSQL_PASSWD = ''         #数据库密码，请修改
+#
+# MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'test_demo_1 (+http://www.yourdomain.com)'

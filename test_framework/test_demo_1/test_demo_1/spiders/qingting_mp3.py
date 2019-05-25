@@ -6,10 +6,16 @@ import requests
 from lxml import html
 import json
 import jieba.analyse
+import pymysql.cursors
 
 class MySpider(scrapy.Spider):
     sql_time = '2019-05-18 13:45:00'
     name = 'QingTing_mp3'
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'test_demo_1.qingting_mp3_sql.Qingting_mp3_Online': 400
+        }
+    }
     all_article_urls = []
     mp3_id = 0
     stop_words = [',', '.', '?', ':', ';', '"', '\'', '/', '+', '-', '[', ']', '{', '}', '@', '#', '$', '%', '^', '&',
@@ -28,7 +34,7 @@ class MySpider(scrapy.Spider):
 
         for url in type_2_base_urls:
             page = 1
-            while page < 25:
+            while page < 12:
                 detail_url = url + str(page)
                 type_2_urls.append(detail_url)
                 page += 1
@@ -36,6 +42,20 @@ class MySpider(scrapy.Spider):
         for link in type_2_urls:
             print(link)
             yield scrapy.Request(url=link, meta={'link': link}, callback=self.parse_details_QingTing)
+
+        self.connect = pymysql.connect(
+            host='47.100.163.195',  # 数据库地址
+            port=3306,  # 数据库端口
+            db='test',  # 数据库名
+            user='recommend',  # 数据库用户名
+            passwd='recommend',  # 数据库密码
+            charset='utf8',  # 编码方式
+            use_unicode=True)
+        self.cursor = self.connect.cursor()
+        sql = 'select MAX(time) from News where website = "QingTing_FM"'
+        self.cursor.execute(sql)
+        D = self.cursor.fetchone()
+        self.sql_time = D[0]
 
     def parse_details_QingTing(self, response):
         rep = requests.get(response.meta['link'])

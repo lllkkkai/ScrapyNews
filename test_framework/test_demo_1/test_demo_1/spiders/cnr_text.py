@@ -2,12 +2,18 @@ import scrapy
 import re
 import jieba.analyse
 from test_demo_1.items import TestDemo1Item
+import pymysql.cursors
 import codecs
 from test_demo_1.textrank4zh import TextRank4Keyword, TextRank4Sentence
+from test_demo_1.mmr import getAbstract
 
 class MySpider(scrapy.Spider):
-    name = 'cnr_all_summary'
-
+    name = 'cnr_text'
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'test_demo_1.cnr_text_sql.MySQLPipeline_cnr': 400
+        }
+    }
     handle_httpstatus_list = [404, 500]
     all_article_urls = []
     first_start_flag = 0    # 0 means first-start
@@ -17,6 +23,21 @@ class MySpider(scrapy.Spider):
     stop_words = [',','.','?',':',';','"','\'','/','+','-','[',']','{','}','@','#','$','%','^','&','*','(',')','=','<','>','！','，','。','：','；','“','”','‘','’','？','《','》','—','（','）',' ']
 
     def start_requests(self):
+
+        self.connect = pymysql.connect(
+            host='47.100.163.195',  # 数据库地址
+            port=3306,  # 数据库端口
+            db='test',  # 数据库名
+            user='recommend',  # 数据库用户名
+            passwd='recommend',  # 数据库密码
+            charset='utf8',  # 编码方式
+            use_unicode=True)
+        self.cursor = self.connect.cursor()
+        sql = 'select MAX(time) from News where website = "cnr"'
+        self.cursor.execute(sql)
+        D = self.cursor.fetchone()
+        self.sql_time = D[0]
+
         type_1_base_urls = [
             'http://china.cnr.cn/yaowen/',
             'http://news.cnr.cn/dj/',
@@ -362,23 +383,23 @@ class MySpider(scrapy.Spider):
                     start_key += ","
         # start_key = (",".join(title_seg))
         keywords = start_key + final_key
-
+        # From the mmr.py to get the abstract of the long news
+        # print(body)
+        # print(abs)
         if terms != "":
-            if time > self.sql_time:
+            if (time > str(self.sql_time)):
                 item['newstitle'] = title
                 item['time'] = time
                 item['source'] = final_source
                 item['href'] = response.meta['link']
                 item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
                 item['content'] = body
-                #item['place'] = self.switch_test_item((response.meta['link']).split('/')[3])
-                # item['place'] = (response.meta['link']).split('/')[3]
                 item['terms'] = final_seg
                 item['keywords'] = keywords
-                item['ranking'] = int(0)
-                # item['abstract'] = ""
+                # item['ranking'] = int(0)
+                item['abstract'] = getAbstract(body)
                 item['website'] = "cnr"
-                return item
+                yield item
         # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
         # body = ""
         # count = 0
@@ -455,7 +476,7 @@ class MySpider(scrapy.Spider):
         keywords = start_key + final_key
 
         if terms != "":
-            if final_time > self.sql_time:
+            if (final_time > str(self.sql_time)):
                 item['time'] = final_time
                 item['source'] = final_source
                 item['href'] = response.meta['link']
@@ -465,11 +486,10 @@ class MySpider(scrapy.Spider):
                 item['terms'] = final_seg
                 item['keywords'] = keywords
                 item['website'] = "cnr"
-                #item['abstract'] = ""
+                item['abstract'] = getAbstract(body)
                 #item['place'] = (response.meta['link']).split('/')[3]
-                item['ranking'] = int(0)
-
-                return item
+                #item['ranking'] = int(0)
+                yield item
 
     def strQ2B(self,ustring):
         # 字符串全角转半角

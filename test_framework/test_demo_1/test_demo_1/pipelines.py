@@ -19,13 +19,6 @@ class TestDemo1Pipeline(object):
             if item['class_id'] in list_num:
                 f.write(item['class_id'] + '\t')
                 f.write(item['newstitle'] + '\n')
-            # f.write("href:   " + item['href'] + '\n')
-            # f.write("content: " + item['content'] + '\n')
-            # f.write("mp3:  " + item['time'] + '\n')
-            # f.write("Time:" + item['source'] + '\n\n')
-            # f.write("First: " + item["seg"] + '\n')
-            # f.write("Keywords:" + item['keywords'] + '\n\n')
-            # f.write("原文:\n" + item['desc'] + '\n\n')
         return item
 
 class MysqlScrapyPipeline(object):

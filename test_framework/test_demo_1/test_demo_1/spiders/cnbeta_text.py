@@ -1,26 +1,18 @@
 import scrapy
 from test_demo_1.items import TestDemo1Item
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import jieba.analyse
+import pymysql.cursors
+import requests
 
 class MySpider(scrapy.Spider):
-    name = 'cnbeta_final'
-    sample_time = '2018-03-06 18:00:00' # Get the newst time from sql
+    name = 'cnbeta_text'
+    sql_time = '2018-03-06 18:00:00' # Get the newst time from sql
     all_article_urls = []
-
-    # def __init__(self):
-    #     chrome_options = Options()
-    #     chrome_options.add_argument("--headless")
-    #     chrome_options.add_argument('--disable-gpu')
-    #     chrome_options.add_argument('--no-sandbox')
-    #     self.browser = webdriver.Chrome(executable_path=(r'C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe'), chrome_options=chrome_options)
-    #     self.browser.set_page_load_timeout(120)
-
-    # def closed(self, spider):
-    #     print("spider closed")
-    #     self.browser.close()
-
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'test_demo_1.cnbeta_text_sql.MySQLPipelineOnline': 400
+        }
+    }
     def start_requests(self):
         cnbeta_urls = ['https://www.cnbeta.com/category/tech.htm',
                        'https://www.cnbeta.com/category/movie.htm',
@@ -33,6 +25,20 @@ class MySpider(scrapy.Spider):
                         ]
         for url in cnbeta_urls:
             yield scrapy.Request(url=url, callback=self.parse)
+
+        self.connect = pymysql.connect(
+            host='47.100.163.195',  # 数据库地址
+            port=3306,  # 数据库端口
+            db='test',  # 数据库名
+            user='recommend',  # 数据库用户名
+            passwd='recommend',  # 数据库密码
+            charset='utf8',  # 编码方式
+            use_unicode=True)
+        self.cursor = self.connect.cursor()
+        sql = 'select MAX(time) from News where website = "cnbeta"'
+        self.cursor.execute(sql)
+        D = self.cursor.fetchone()
+        self.sql_time = D[0]
 
     def parse(self, response):
         # normal item article
@@ -110,7 +116,7 @@ class MySpider(scrapy.Spider):
         # print(response.meta['link'])
         # print(body)
 
-        if (self.sample_time < final_time):
+        if (str(self.sql_time) < final_time):
             # if news time late than the sample time
             # store in the item
             item['time'] = final_time
@@ -118,12 +124,10 @@ class MySpider(scrapy.Spider):
             item['href'] = response.meta['link']
             item['newstitle'] = title
             item['content'] = body
-            item['abstract'] = detail_desc
+            item['abs'] = detail_desc
             item['class_id'] = int(detail_tag)
             item['terms'] = final_seg
             item['keywords'] = final_key
-            #item['place'] = ''
-            item['ranking'] = int(0)
             item['website'] = "cnbeta"
             yield item
 

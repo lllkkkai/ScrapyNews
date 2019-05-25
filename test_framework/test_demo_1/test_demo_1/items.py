@@ -10,7 +10,7 @@ import scrapy
 class TestDemo1Item(scrapy.Item):
     # define the fields for your item here like:
     newstitle = scrapy.Field() #标题
-    abstract = scrapy.Field()
+    abs = scrapy.Field()
     content = scrapy.Field()
     keywords = scrapy.Field()
     class_id = scrapy.Field()
@@ -18,7 +18,6 @@ class TestDemo1Item(scrapy.Item):
     ranking = scrapy.Field()
     href = scrapy.Field()
     time = scrapy.Field()
-    place = scrapy.Field()
     terms = scrapy.Field()
     website = scrapy.Field()
 

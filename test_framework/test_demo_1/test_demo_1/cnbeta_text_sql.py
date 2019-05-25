@@ -16,8 +16,8 @@ class MySQLPipelineOnline(object):
 
     def process_item(self, item, spider):
         self.cursor.execute(
-            """insert into Zhongguozhisheng(id,title,mp3_url,time) values(%s,%s,%s,%s)""",  # 纯属python操作mysql知识，不熟悉请恶补
-            (item['id'], item['title'], item['mp3_link'],item['time'],))
+            """insert into News(website,newstitle,abs,content,keywords,classid,source,href,time,terms) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)""",
+            (item['website'], item['newstitle'], item['abs'], item['content'], item['keywords'], item['class_id'], item['source'], item['href'], item['time'], item['terms']))
         # 提交sql语句
         self.connect.commit()
         return item  # 必须实现返回
