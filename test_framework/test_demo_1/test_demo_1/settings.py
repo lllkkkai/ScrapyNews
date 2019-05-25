@@ -24,9 +24,9 @@ NEWSPIDER_MODULE = 'test_demo_1.spiders'
 #     'test_demo_1.MySQLPipelineOnline.MySQLPipelineOnline': 300,#cnbeta保存到mysql数据库
 # }
 
-# ITEM_PIPELINES = {
-#     'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnr保存到mysql数据库
-# }
+ITEM_PIPELINES = {
+    'test_demo_1.MySQLPipeline_cnr.MySQLPipeline_cnr': 300,#cnr保存到mysql数据库
+}
 
 # ITEM_PIPELINES = {
 #     'test_demo_1.LocalPipeline.LocalPipeline': 300, # local sql
@@ -36,9 +36,9 @@ NEWSPIDER_MODULE = 'test_demo_1.spiders'
 #     'test_demo_1.CNR_mp3_Online.CNR_mp3_Online': 300, # online sql
 # }
 
-ITEM_PIPELINES = {
-  'test_demo_1.Qingting_mp3_Online.Qingting_mp3_Online': 300, # qing ting online sql
-}
+# ITEM_PIPELINES = {
+#   'test_demo_1.Qingting_mp3_Online.Qingting_mp3_Online': 300, # qing ting online sql
+# }
 
 #Mysql数据库的配置信息
 MYSQL_HOST = '127.0.0.1'

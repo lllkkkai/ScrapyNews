@@ -3,7 +3,7 @@ from test_demo_1.items import ygnews_mp3_Item
 import jieba.analyse
 
 class MySpider(scrapy.Spider):
-    sql_time = '2018-01-01 00:00:00'
+    sql_time = '2019-05-18 07:00:00'
     name = 'cnr_final_m3a'
     all_article_urls = []
     mp3_id = 0

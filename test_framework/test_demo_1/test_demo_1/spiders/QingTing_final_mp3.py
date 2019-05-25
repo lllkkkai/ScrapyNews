@@ -8,7 +8,7 @@ import json
 import jieba.analyse
 
 class MySpider(scrapy.Spider):
-    sql_time = '2018-01-01 00:00:00'
+    sql_time = '2019-05-18 13:45:00'
     name = 'QingTing_mp3'
     all_article_urls = []
     mp3_id = 0
@@ -28,7 +28,7 @@ class MySpider(scrapy.Spider):
 
         for url in type_2_base_urls:
             page = 1
-            while page < 20:
+            while page < 25:
                 detail_url = url + str(page)
                 type_2_urls.append(detail_url)
                 page += 1
@@ -49,25 +49,26 @@ class MySpider(scrapy.Spider):
 
         list = d['AlbumStore']['plist']
         for i in list:
-            item = QingTing_mp3_Item()
-            item['audiosurl'] = 'https://od.qingting.fm/' + i['file_path']
-            item['newstitle'] = i['name']
-            item['time'] = i['update_time']
-            item['classid'] = int(31)
-            item['website'] = 'QingTing_FM'
-            item['source'] = 'QingTing_FM'
+            if i['update_time'] > self.sql_time:
+                item = QingTing_mp3_Item()
+                item['audiosurl'] = 'https://od.qingting.fm/' + i['file_path']
+                item['newstitle'] = i['name']
+                item['time'] = i['update_time']
+                item['classid'] = int(31)
+                item['website'] = 'QingTing_FM'
+                item['source'] = 'QingTing_FM'
 
-            start_key = ""
-            title_no_space = i['name'].strip()
-            title_seg = jieba.cut(title_no_space, cut_all=False)
-            for word in title_seg:
-                if word not in self.stop_words:
-                    if word != '\t':
-                        start_key += word
-                        start_key += ","
-            # start_key = (",".join(title_seg))
-            item['keywords'] = start_key
-            item['ttsTag'] = int(1)
-            item['ranking'] = int(1)
+                start_key = ""
+                title_no_space = i['name'].strip()
+                title_seg = jieba.cut(title_no_space, cut_all=False)
+                for word in title_seg:
+                    if word not in self.stop_words:
+                        if word != '\t':
+                            start_key += word
+                            start_key += ","
+                # start_key = (",".join(title_seg))
+                item['keywords'] = start_key
+                item['ttsTag'] = int(1)
+                item['ranking'] = int(1)
 
-            yield item
+                yield item

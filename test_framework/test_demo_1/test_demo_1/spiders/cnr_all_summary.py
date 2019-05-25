@@ -12,7 +12,7 @@ class MySpider(scrapy.Spider):
     all_article_urls = []
     first_start_flag = 0    # 0 means first-start
                             # 1 means update
-    sample_time = '2019-03-06 18:00:00'  # Get the newst time from sql
+    sql_time = '2019-05-11 12:00:00'  # Get the newst time from sql
 
     stop_words = [',','.','?',':',';','"','\'','/','+','-','[',']','{','}','@','#','$','%','^','&','*','(',')','=','<','>','！','，','。','：','；','“','”','‘','’','？','《','》','—','（','）',' ']
 
@@ -364,20 +364,21 @@ class MySpider(scrapy.Spider):
         keywords = start_key + final_key
 
         if terms != "":
-            item['newstitle'] = title
-            item['time'] = time
-            item['source'] = final_source
-            item['href'] = response.meta['link']
-            item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
-            item['content'] = body
-            #item['place'] = self.switch_test_item((response.meta['link']).split('/')[3])
-            # item['place'] = (response.meta['link']).split('/')[3]
-            item['terms'] = final_seg
-            item['keywords'] = keywords
-            item['ranking'] = int(0)
-            # item['abstract'] = ""
-            item['website'] = "cnr"
-            return item
+            if time > self.sql_time:
+                item['newstitle'] = title
+                item['time'] = time
+                item['source'] = final_source
+                item['href'] = response.meta['link']
+                item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
+                item['content'] = body
+                #item['place'] = self.switch_test_item((response.meta['link']).split('/')[3])
+                # item['place'] = (response.meta['link']).split('/')[3]
+                item['terms'] = final_seg
+                item['keywords'] = keywords
+                item['ranking'] = int(0)
+                # item['abstract'] = ""
+                item['website'] = "cnr"
+                return item
         # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
         # body = ""
         # count = 0
@@ -454,20 +455,21 @@ class MySpider(scrapy.Spider):
         keywords = start_key + final_key
 
         if terms != "":
-            item['time'] = final_time
-            item['source'] = final_source
-            item['href'] = response.meta['link']
-            item['newstitle'] = title
-            item['content'] = body
-            item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
-            item['terms'] = final_seg
-            item['keywords'] = keywords
-            item['website'] = "cnr"
-            #item['abstract'] = ""
-            #item['place'] = (response.meta['link']).split('/')[3]
-            item['ranking'] = int(0)
+            if final_time > self.sql_time:
+                item['time'] = final_time
+                item['source'] = final_source
+                item['href'] = response.meta['link']
+                item['newstitle'] = title
+                item['content'] = body
+                item['class_id'] = self.switch_test_item((response.meta['link']).split('/')[3])
+                item['terms'] = final_seg
+                item['keywords'] = keywords
+                item['website'] = "cnr"
+                #item['abstract'] = ""
+                #item['place'] = (response.meta['link']).split('/')[3]
+                item['ranking'] = int(0)
 
-            return item
+                return item
 
     def strQ2B(self,ustring):
         # 字符串全角转半角
