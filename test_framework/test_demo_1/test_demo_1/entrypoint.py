@@ -1,2 +1,2 @@
 from scrapy.cmdline import execute
-execute(['scrapy', 'crawlall'])
+execute(['scrapy', 'crawl','cnr_text'])

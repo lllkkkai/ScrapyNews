@@ -1,6 +1,7 @@
 import requests
 import pymysql.cursors
 from test_demo_1.mmr import getAbstract
+import json
 
 connect = pymysql.connect(
             host='47.100.163.195',  # 数据库地址
@@ -12,7 +13,7 @@ connect = pymysql.connect(
             use_unicode=True)
         # 通过cursor执行增删查改
 cursor = connect.cursor()
-sql = 'select newsid,content from News where website = "cnr" and abs is null'
+sql = 'select newsid,abs from News where website in ("cnr","cnbeta") and audiosurl is null limit 0,2'
 cursor.execute(sql)
 results = cursor.fetchall()
 connect.close()
@@ -29,13 +30,14 @@ connect2 = pymysql.connect(
 cursor2 = connect2.cursor()
 for wert in results:
     newsid = wert[0]
-    content = wert[1]
-    abs = getAbstract(content)
-    sql2 = 'UPDATE News SET abs = %s where newsid = %s;'
-    cursor2.execute(sql2,(abs,newsid))
+    abs = wert[1]
+    payload = {
+        'newsid' : newsid,
+        'abs'    : abs
+    }
+    response = requests.get('http://47.100.163.195/qa-service/tts/generateAudio', params=payload)
+    all_json = json.loads(response)
+    audiosurl = all_json['data']
+    sql2 = 'UPDATE News SET audiosurl = %s where newsid = %s;'
+    cursor2.execute(sql2,(audiosurl,newsid))
     connect2.commit()
-
-
-
-
-# r = requests.get('http://47.100.163.195/qa-service/tts/generateAudio', params=payload)

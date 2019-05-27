@@ -34,19 +34,19 @@ class MySpider(scrapy.Spider):
             print(link)
             yield scrapy.Request(url=link, callback=self.parse_type_1)
 
-        self.connect = pymysql.connect(
-            host='47.100.163.195',  # 数据库地址
-            port=3306,  # 数据库端口
-            db='test',  # 数据库名
-            user='recommend',  # 数据库用户名
-            passwd='recommend',  # 数据库密码
-            charset='utf8',  # 编码方式
-            use_unicode=True)
-        self.cursor = self.connect.cursor()
-        sql = 'select MAX(time) from News where website = "cnr_mp3"'
-        self.cursor.execute(sql)
-        D = self.cursor.fetchone()
-        self.sql_time = D[0]
+        # self.connect = pymysql.connect(
+        #     host='47.100.163.195',  # 数据库地址
+        #     port=3306,  # 数据库端口
+        #     db='test',  # 数据库名
+        #     user='recommend',  # 数据库用户名
+        #     passwd='recommend',  # 数据库密码
+        #     charset='utf8',  # 编码方式
+        #     use_unicode=True)
+        # self.cursor = self.connect.cursor()
+        # sql = 'select MAX(time) from News where website = "cnr_mp3"'
+        # self.cursor.execute(sql)
+        # D = self.cursor.fetchone()
+        # self.sql_time = D[0]
 
     def parse_type_1(self, response):
         for infor in response.xpath('//div[@class="articleList"]'):

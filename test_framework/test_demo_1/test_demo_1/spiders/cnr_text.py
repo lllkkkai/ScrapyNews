@@ -397,7 +397,7 @@ class MySpider(scrapy.Spider):
                 item['terms'] = final_seg
                 item['keywords'] = keywords
                 # item['ranking'] = int(0)
-                item['abstract'] = getAbstract(body)
+                item['abs'] = getAbstract(body)
                 item['website'] = "cnr"
                 yield item
         # detail_article = article.xpath('normalize-space(string(.))').extract()[0].replace(u'\u3000',u'').replace(u'\xa0', u' ')
@@ -486,7 +486,7 @@ class MySpider(scrapy.Spider):
                 item['terms'] = final_seg
                 item['keywords'] = keywords
                 item['website'] = "cnr"
-                item['abstract'] = getAbstract(body)
+                item['abs'] = getAbstract(body)
                 #item['place'] = (response.meta['link']).split('/')[3]
                 #item['ranking'] = int(0)
                 yield item

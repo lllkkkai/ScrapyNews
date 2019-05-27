@@ -3,56 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2b2849f6-f155-4eea-bfb1-b8cd18ec986e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/CNR_mp3_Online.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/LocalPipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipelineCNRmp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipelineOnline.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/MySQLPipeline_cnr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/Qingting_mp3_Online.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/debug.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/cnr_text_sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/cnr_text_sql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_demo_1/entrypoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/entrypoint.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/geckodriver.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/ghostdriver.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/m3a_511.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news411.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news414.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news415.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news418.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news419.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news504.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news510.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news511.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/news_mp3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/quotes-www.cnbeta.com.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/screen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/IFeng_mp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/QingTing_final_mp3.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/Qingting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_data_store.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_final.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_2_store_txt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_roll_re.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_all_summary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_final_m3a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_get_m3a.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_get_mp3_2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_native.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/find_result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/quote.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/re_219.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/temp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/test1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/test_result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/ygnews1.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/摘要样本（按句子分，第一段+选出原文最重要的6-7个句子）.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_demo_1/摘要样本（按段落分，第一段+选出原文3-4个自然段）.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/get_human_voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/get_human_voice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +17,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+            <state relative-caret-position="323">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/test_human_voice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/get_abs_txt_from_sql.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
+            <state relative-caret-position="323">
               <caret line="19" column="54" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="54" />
             </state>
           </provider>
@@ -83,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -95,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+            <state relative-caret-position="357">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -105,10 +84,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/get_human_voice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_demo_1/cnr_text_sql.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="1224">
+              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -119,22 +119,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/qingting_mp3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="51">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_demo_1/mmr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="273" column="86" lean-forward="true" selection-start-line="273" selection-start-column="86" selection-end-line="273" selection-end-column="86" />
-              <folding>
-                <element signature="e#14#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_demo_1/spiders/dmoz_spider.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/ygnews1.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/test1.py" />
         <option value="$PROJECT_DIR$/test_demo_1/news.txt" />
@@ -194,22 +181,23 @@
         <option value="$PROJECT_DIR$/test_demo_1/cnbeta_text_sql.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/mmr.py" />
         <option value="$PROJECT_DIR$/test_demo_1/mmr.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/cnr_text_sql.py" />
         <option value="$PROJECT_DIR$/test_demo_1/get_abs_txt_from_sql.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/get_human_voice.py" />
         <option value="$PROJECT_DIR$/test_demo_1/commands/__init__.py" />
         <option value="$PROJECT_DIR$/test_demo_1/settings.py" />
         <option value="$PROJECT_DIR$/test_demo_1/pipelines.py" />
         <option value="$PROJECT_DIR$/test_demo_1/commands/crawlall.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_text.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/get_human_voice.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py" />
         <option value="$PROJECT_DIR$/test_demo_1/spiders/qingting_mp3.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py" />
-        <option value="$PROJECT_DIR$/test_demo_1/spiders/cnbeta_text.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/entrypoint.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/cnr_text_sql.py" />
+        <option value="$PROJECT_DIR$/test_demo_1/test_human_voice.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="width" value="975" />
     <option name="height" value="1059" />
@@ -277,7 +265,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.entrypoint">
+  <component name="RunManager" selected="Python.test_human_voice">
     <configuration name="entrypoint" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test_demo_1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -341,27 +329,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_test_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="test_demo_1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_demo_1/spiders" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/spiders/get_test_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="mmr" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="test_demo_1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -383,13 +350,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test_human_voice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="test_demo_1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_demo_1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_demo_1/test_human_voice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_human_voice" />
         <item itemvalue="Python.entrypoint" />
         <item itemvalue="Python.get_human_voice" />
         <item itemvalue="Python.get_abs_txt_from_sql" />
         <item itemvalue="Python.mmr" />
-        <item itemvalue="Python.get_test_data" />
       </list>
     </recent_temporary>
   </component>
@@ -416,18 +404,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19301033" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19221604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32867134" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.7937063" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.6083916" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="5" sideWeight="0.49947312" weight="0.48601398" />
+      <window_info active="true" anchor="bottom" x="11" y="74" width="1898" height="902" id="Run" order="5" sideWeight="0.49947312" visible="true" weight="0.38286713" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32867134" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32832617" />
@@ -438,20 +426,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test_demo_1/news504.txt" />
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_get_m3a.py" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_get_mp3_2.py" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipelineOnline.py" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/MySQLPipeline.py" />
@@ -540,13 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/cnbeta_text_sql.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -561,23 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/get_abs_txt_from_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/commands/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/commands/__init__.py" />
     <entry file="file://$PROJECT_DIR$/test_demo_1/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -595,13 +547,6 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/cnr_text_sql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -629,47 +574,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/PY/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="347" selection-start-line="347" selection-end-line="347" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/get_abs_txt_from_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="323">
           <caret line="19" column="54" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnbeta_text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/cnr_text_sql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_mp3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/get_human_voice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="1224">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -678,18 +641,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/qingting_mp3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="51">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_demo_1/entrypoint.py">
+    <entry file="file://$PROJECT_DIR$/test_demo_1/spiders/cnr_text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        <state relative-caret-position="357">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/get_human_voice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="42" column="21" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_demo_1/test_human_voice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
